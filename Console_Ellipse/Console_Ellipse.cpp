@@ -144,6 +144,5 @@ int main()
     PTSat_Z[0] = 2*EarthRadius;
     PTSat_Z[1] = 3*EarthRadius;
     PTSat_Z[2] = EarthRadius;
-    std::cout << "PTSAT_norm[0]:" << PTSat_Z[0] << std::endl;
     std::cout << "PTSAT_norm[0]:" << NormVector(PTSat_Z)[1] << std::endl;
 }

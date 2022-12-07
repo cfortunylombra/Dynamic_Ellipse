@@ -1,4 +1,4 @@
-﻿  NormVectorLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\NormVectorLibrary.cpp(6,34): warning C4273: 'NormVector': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\NormVectorLibrary.h(10,35): message : see previous definition of 'NormVector'
+﻿  Sat2EarthLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Sat2EarthLibrary.cpp(6,55): warning C4273: 'Sat2Earth': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Sat2EarthLibrary.h(10,40): message : see previous definition of 'Sat2Earth'
   Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll
