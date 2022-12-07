@@ -1,4 +1,4 @@
-﻿  CenterGravityLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\CenterGravityLibrary.cpp(8,130): warning C4273: 'CenterGravity': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\CenterGravityLibrary.h(16,47): message : see previous definition of 'CenterGravity'
+﻿  NormVectorLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\NormVectorLibrary.cpp(6,34): warning C4273: 'NormVector': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\NormVectorLibrary.h(10,35): message : see previous definition of 'NormVector'
   Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll

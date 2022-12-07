@@ -8,6 +8,7 @@
 #include "TransformationMatrixLibrary.h"
 #include "Earth2SatLibrary.h"
 #include "Sat2EarthLibrary.h"
+#include "NormVectorLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -108,7 +109,7 @@ int main()
 
     // Test: Update Logitudes (Trying with 225deg)
     std::cout << "\nTest 2:" << std::endl;
-    std::cout << "Previous longitude in deg of St2:" << UpdateLongitude(npts_test1, orbpos_test1, tlon_test1)[2] << std::endl;
+    std::cout << "Previous longitude in deg of St2:" << tlon_test1[2] << std::endl;
     std::cout << "New longitude in deg of St2:" << UpdateLongitude(npts_test1, orbpos_test1, tlon_test1)[2] << std::endl;
 
     // Test: Change of coordinates
@@ -136,4 +137,13 @@ int main()
     PTSat[1] = 0.0f;
     PTSat[2] = 0.0f;
     std::cout << "PTEarth[0]:" << Sat2Earth(Matrices.MatrixSat2EC, PTSat)[0] << std::endl;
+
+    //Test: Norm Vector to have a unit z-component
+    std::cout << "\nTest 7:" << std::endl;
+    float PTSat_Z[3];
+    PTSat_Z[0] = 2*EarthRadius;
+    PTSat_Z[1] = 3*EarthRadius;
+    PTSat_Z[2] = EarthRadius;
+    std::cout << "PTSAT_norm[0]:" << PTSat_Z[0] << std::endl;
+    std::cout << "PTSAT_norm[0]:" << NormVector(PTSat_Z)[1] << std::endl;
 }

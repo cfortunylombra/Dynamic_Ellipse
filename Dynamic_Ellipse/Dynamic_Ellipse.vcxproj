@@ -159,6 +159,7 @@
     <ClInclude Include="Dynamic_Ellipse.h" />
     <ClInclude Include="Earth2SatLibrary.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="NormVectorLibrary.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Polar2RectangularLibrary.h" />
     <ClInclude Include="Sat2EarthLibrary.h" />
@@ -171,6 +172,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Dynamic_Ellipse.cpp" />
     <ClCompile Include="Earth2SatLibrary.cpp" />
+    <ClCompile Include="NormVectorLibrary.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
