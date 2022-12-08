@@ -1,5 +1,10 @@
-﻿  EliminateLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.cpp(6,66): warning C4273: 'EliminatePoints': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.h(10,38): message : see previous definition of 'EliminatePoints'
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.cpp(19,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+﻿  PointsCheckEllipseLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\PointsCheckEllipseLibrary.cpp(6,104): warning C4273: 'PointsCheck': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\PointsCheckEllipseLibrary.h(18,54): message : see previous definition of 'PointsCheck'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\PointsCheckEllipseLibrary.cpp(24,9): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.exp
+LINK : warning LNK4217: symbol 'UpdateLongitude' defined in 'UpdateLongitudeLibrary.obj' is imported by 'CenterGravityLibrary.obj' in function 'CenterGravity'
+LINK : warning LNK4217: symbol 'Rad' defined in 'Constants.obj' is imported by 'Polar2RectangularLibrary.obj' in function 'Pol2Rect'
+LINK : warning LNK4286: symbol 'Rad' defined in 'Constants.obj' is imported by 'TransformationMatrixLibrary.obj'
+LINK : warning LNK4217: symbol 'GEOAlt_EarthRad_rat' defined in 'Constants.obj' is imported by 'TransformationMatrixLibrary.obj' in function 'TransformationMatrix'
   Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll

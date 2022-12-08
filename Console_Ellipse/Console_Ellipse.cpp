@@ -10,6 +10,7 @@
 #include "Sat2EarthLibrary.h"
 #include "NormVectorLibrary.h"
 #include "EliminateLibrary.h"
+#include "PointsCheckEllipseLibrary.h"
 #include <iostream>
 #include <algorithm>
 

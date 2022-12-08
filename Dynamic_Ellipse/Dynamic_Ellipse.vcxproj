@@ -162,6 +162,7 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="NormVectorLibrary.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PointsCheckEllipseLibrary.h" />
     <ClInclude Include="Polar2RectangularLibrary.h" />
     <ClInclude Include="Sat2EarthLibrary.h" />
     <ClInclude Include="TransformationMatrixLibrary.h" />
@@ -181,6 +182,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PointsCheckEllipseLibrary.cpp" />
     <ClCompile Include="Polar2RectangularLibrary.cpp" />
     <ClCompile Include="Sat2EarthLibrary.cpp" />
     <ClCompile Include="TransformationMatrixLibrary.cpp" />
