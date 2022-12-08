@@ -1,4 +1,5 @@
-﻿  Sat2EarthLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Sat2EarthLibrary.cpp(6,55): warning C4273: 'Sat2Earth': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Sat2EarthLibrary.h(10,40): message : see previous definition of 'Sat2Earth'
+﻿  EliminateLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.cpp(6,66): warning C4273: 'EliminatePoints': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.h(10,38): message : see previous definition of 'EliminatePoints'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.cpp(19,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll

@@ -9,6 +9,7 @@
 #include "Earth2SatLibrary.h"
 #include "Sat2EarthLibrary.h"
 #include "NormVectorLibrary.h"
+#include "EliminateLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -145,4 +146,25 @@ int main()
     PTSat_Z[1] = 3*EarthRadius;
     PTSat_Z[2] = EarthRadius;
     std::cout << "PTSAT_norm[0]:" << NormVector(PTSat_Z)[1] << std::endl;
+
+    //Test: Eliminate points which are automatically within the ellipse if other points are within or on the ellipse
+    std::cout << "\nTest 8:" << std::endl;
+    float** PTSatRect_test1;
+    PTSatRect_test1 = new float* [400];
+    for (int i = 0; i < 400; i++) {
+        PTSatRect_test1[i] = new float[3];
+    }
+    PTSatRect_test1[0][0] = EarthRadius;
+    PTSatRect_test1[0][1] = 0.0f;
+    PTSatRect_test1[0][2] = 0.0f;
+    PTSatRect_test1[1][0] = 0.0f;
+    PTSatRect_test1[1][1] = EarthRadius;
+    PTSatRect_test1[1][2] = 0.0f;
+    PTSatRect_test1[2][0] = 0.0f;
+    PTSatRect_test1[2][1] = 0.0f;
+    PTSatRect_test1[2][2] = EarthRadius;
+    PTSatRect_test1[3][0] = EarthRadius / std::sqrt(3.0f);
+    PTSatRect_test1[3][1] = EarthRadius / std::sqrt(3.0f);
+    PTSatRect_test1[3][2] = EarthRadius / std::sqrt(3.0f);
+    std::cout << "PTOut[0]:" << EliminatePoints(npts_test1,PTSatRect_test1)[2][2] << std::endl; // if you try [3][2] gives error!
 }
