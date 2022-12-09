@@ -15,7 +15,8 @@ PointsCheck_struct PointsCheck(const long& M, float& AMin, float& CoefAB, float&
 		float YL = PSOut[i][1];
 
 		if (CoefAB * (XL * XL + YL * YL) > 1) {
-			PointsCheck_struct output = { A0, B0, CK0, RaMin};
+			// Four parameters are returned (A0, B0, CK0, Area0)
+			PointsCheck_struct output = { A0, B0, CK0, Area0};
 			return output;
 		}
 	}
@@ -25,6 +26,7 @@ PointsCheck_struct PointsCheck(const long& M, float& AMin, float& CoefAB, float&
 	B0 = A0;
 	CK0 = 0.0f;
 
-	PointsCheck_struct output = { A0, B0, CK0, RaMin };
+	// Four parameters are returned (A0, B0, CK0, Area0)
+	PointsCheck_struct output = { A0, B0, CK0, Area0 };
 	return output;
 }

@@ -160,6 +160,7 @@
     <ClInclude Include="Earth2SatLibrary.h" />
     <ClInclude Include="EliminateLibrary.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="MinimumSemiMinorAxisLibrary.h" />
     <ClInclude Include="NormVectorLibrary.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PointsCheckEllipseLibrary.h" />
@@ -175,6 +176,7 @@
     <ClCompile Include="Dynamic_Ellipse.cpp" />
     <ClCompile Include="Earth2SatLibrary.cpp" />
     <ClCompile Include="EliminateLibrary.cpp" />
+    <ClCompile Include="MinimumSemiMinorAxisLibrary.cpp" />
     <ClCompile Include="NormVectorLibrary.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
