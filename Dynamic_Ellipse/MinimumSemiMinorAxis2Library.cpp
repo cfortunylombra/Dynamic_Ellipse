@@ -1,19 +1,20 @@
 #include "pch.h"
 #include "MinimumSemiMinorAxis2Library.h"
+#include "TrigonometricEqSolveLibrary.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 // Definition: This library determines an ellipse with a given minimum semi-major axis
 MinAxis2_struct MinAxis2(const long& M, float& A0, float& B0, float& CK0, float& AMin, float** PSOut) {
+	// Initialization
+	float TH1 = 0.0f;
+	float TH2 = 0.0f;
+		
 	float Area0 = 1000001.0f;
 	float Beta2 = 1 / std::pow(AMin,2);
 	float RaMin = AMin;
 	float RBeta2 = 1 / std::pow(RaMin, 2);
-
-	float TH1;
-	float TH2;
-
 
 	for (int i = 0; i < M - 1; i++) {
 		float X1 = PSOut[i][0];
@@ -87,6 +88,8 @@ MinAxis2_struct MinAxis2(const long& M, float& A0, float& B0, float& CK0, float&
 				}
 
 				// CALL SUBROUTINE
+				float Alpha2 = TrigSolve(X1, Y1, X2, Y2, TH1, TH2, AMin).Alpha;
+				float THFin = TrigSolve(X1, Y1, X2, Y2, TH1, TH2, AMin).THFIN;
 
 				if (Alpha2 > 0) {
 					continue;
@@ -126,6 +129,7 @@ MinAxis2_struct MinAxis2(const long& M, float& A0, float& B0, float& CK0, float&
 			}
 	}
 
+	// Four parameters are returned
 	MinAxis2_struct output = { A0, B0, CK0, Area0 };
 	return output;
 }

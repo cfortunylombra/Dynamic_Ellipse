@@ -12,6 +12,8 @@
 #include "EliminateLibrary.h"
 #include "PointsCheckEllipseLibrary.h"
 #include "MinimumSemiMinorAxisLibrary.h"
+#include "MinimumSemiMinorAxis2Library.h"
+#include "TrigonometricEqSolveLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -176,6 +178,11 @@ int main()
     //Test: MinimumSemiMinorAxisLibrary
     std::cout << "\nTest 10:" << std::endl;
 
-    //
+    //Test: MinimumSemiMinorAxis2Library
+    std::cout << "\nTest 11:" << std::endl;
+
+    //Test: TrigonometricEqSolveLibrary
+    std::cout << "\nTest 12:" << std::endl;
+
 
 }

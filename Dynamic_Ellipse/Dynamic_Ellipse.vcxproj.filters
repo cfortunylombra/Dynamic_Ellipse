@@ -63,6 +63,9 @@
     <ClInclude Include="MinimumSemiMinorAxis2Library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TrigonometricEqSolveLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dynamic_Ellipse.cpp">
@@ -108,6 +111,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MinimumSemiMinorAxis2Library.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TrigonometricEqSolveLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

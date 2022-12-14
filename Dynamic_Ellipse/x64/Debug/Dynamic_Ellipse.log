@@ -1,8 +1,21 @@
-﻿  MinimumSemiMinorAxisLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(8,103): warning C4273: 'MinAxis1': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.h(18,48): message : see previous definition of 'MinAxis1'
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(10,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(17,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(26,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(28,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(43,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  MinimumSemiMinorAxis2Library.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(9,103): warning C4273: 'MinAxis2': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.h(18,48): message : see previous definition of 'MinAxis2'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(15,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(17,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(22,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(48,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(55,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(80,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(84,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(87,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(99,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(101,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(121,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+     Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.exp
+LINK : warning LNK4217: symbol 'UpdateLongitude' defined in 'UpdateLongitudeLibrary.obj' is imported by 'CenterGravityLibrary.obj' in function 'CenterGravity'
+LINK : warning LNK4217: symbol 'TrigSolve' defined in 'TrigonometricEqSolveLibrary.obj' is imported by 'MinimumSemiMinorAxis2Library.obj' in function 'MinAxis2'
+LINK : warning LNK4217: symbol 'Rad' defined in 'Constants.obj' is imported by 'Polar2RectangularLibrary.obj' in function 'Pol2Rect'
+LINK : warning LNK4286: symbol 'Rad' defined in 'Constants.obj' is imported by 'TransformationMatrixLibrary.obj'
+LINK : warning LNK4217: symbol 'GEOAlt_EarthRad_rat' defined in 'Constants.obj' is imported by 'TransformationMatrixLibrary.obj' in function 'TransformationMatrix'
+  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll

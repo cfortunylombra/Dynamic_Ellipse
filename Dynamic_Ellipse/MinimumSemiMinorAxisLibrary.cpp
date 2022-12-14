@@ -49,8 +49,8 @@ MinAxis1_struct MinAxis1(const long& M, float& A0, float& B0, float& CK0, float&
 				CK0 = CK;
 			}
 		}
-
+	
+	// Four parameters are returned
 	MinAxis1_struct output = { A0, B0, CK0, Area0 };
-
 	return output;
 }
