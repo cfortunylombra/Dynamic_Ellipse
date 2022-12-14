@@ -12,3 +12,5 @@ The goal is to produce a new version of this `dll`. This new version must have s
 
 - Dynamic_Ellipse: DLL
 - Console_Ellipse: EXE
+
+![image](https://user-images.githubusercontent.com/48519946/207665235-ccf71344-81b4-4429-b4a5-23604784d28b.png)
