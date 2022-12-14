@@ -11,6 +11,7 @@
 #include "NormVectorLibrary.h"
 #include "EliminateLibrary.h"
 #include "PointsCheckEllipseLibrary.h"
+#include "MinimumSemiMinorAxisLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -168,4 +169,13 @@ int main()
     PTSatRect_test1[3][1] = EarthRadius / std::sqrt(3.0f);
     PTSatRect_test1[3][2] = EarthRadius / std::sqrt(3.0f);
     std::cout << "PTOut[0]:" << EliminatePoints(npts_test1,PTSatRect_test1)[2][2] << std::endl; // if you try [3][2] gives error!
+
+    //Test: PointsCheckEllipseLibrary
+    std::cout << "\nTest 9:" << std::endl;
+
+    //Test: MinimumSemiMinorAxisLibrary
+    std::cout << "\nTest 10:" << std::endl;
+
+    //
+
 }

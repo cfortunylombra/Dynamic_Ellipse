@@ -15,4 +15,4 @@ struct PointsCheck_struct {
     float Area0;
 };
 
-extern "C" POINTSCHECKLIBRARY_API PointsCheck_struct PointsCheck(const long& M, float& AMin, float& CoefAB, float& ArMin, float** PSOut);
+extern "C" POINTSCHECKLIBRARY_API PointsCheck_struct PointsCheck(const long& M, float& AMin, float& CoefAB, float& ArMin, float& A0, float& B0, float& CK0, float** PSOut);
