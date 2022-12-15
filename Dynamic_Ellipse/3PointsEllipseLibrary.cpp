@@ -1,11 +1,12 @@
 #include "pch.h"
 #include "3PointsEllipseLibrary.h"
+#include "Solution3LinearEqLibrary.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 // Definition: This library determines an ellipse containing 3 points of psout and encompassing the rest m-3
-Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, float& B0, float& CK0, float& A, float& B, float& CK, float& CoefAB) {
+Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, float& B0, float& CK0, float& CoefAB) {
 	float Area0 = 1000001.0f;
 
 	for (int i = 0; i < M - 2; i++) {
@@ -22,7 +23,9 @@ Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, fl
 					float Y3 = PSOut[k][1];
 
 					// Call Subroutine
-
+					float A = Sol3LinEq(X1, Y1, X2, Y2, X3, Y3).A;
+					float B = Sol3LinEq(X1, Y1, X2, Y2, X3, Y3).B;
+					float CK = Sol3LinEq(X1, Y1, X2, Y2, X3, Y3).CK;
 
 					if ((A <= 0) || (B <= 0) || (4 * A * B - CK * CK <= 0)) {
 						continue;

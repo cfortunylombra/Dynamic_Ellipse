@@ -15,4 +15,4 @@ struct Points3Ellipse_struct {
     float Area0;
 };
 
-extern "C" PTS3LIBRARY_API Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, float& B0, float& CK0, float& A, float& B, float& CK, float& CoefAB);
+extern "C" PTS3LIBRARY_API Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, float& B0, float& CK0, float& CoefAB);

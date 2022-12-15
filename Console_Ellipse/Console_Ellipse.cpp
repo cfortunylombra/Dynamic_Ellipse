@@ -15,6 +15,7 @@
 #include "MinimumSemiMinorAxis2Library.h"
 #include "TrigonometricEqSolveLibrary.h"
 #include "3PointsEllipseLibrary.h"
+#include "Solution3LinearEqLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -187,5 +188,8 @@ int main()
 
     //Test: 3PointsEllipseLibrary
     std::cout << "\nTest 13:" << std::endl;
+
+    //Test: Solution3LinearEqLibrary
+    std::cout << "\nTest 14:" << std::endl;
 
 }

@@ -168,6 +168,7 @@
     <ClInclude Include="PointsCheckEllipseLibrary.h" />
     <ClInclude Include="Polar2RectangularLibrary.h" />
     <ClInclude Include="Sat2EarthLibrary.h" />
+    <ClInclude Include="Solution3LinearEqLibrary.h" />
     <ClInclude Include="TransformationMatrixLibrary.h" />
     <ClInclude Include="TrigonometricEqSolveLibrary.h" />
     <ClInclude Include="UpdateLongitudeLibrary.h" />
@@ -183,6 +184,7 @@
     <ClCompile Include="MinimumSemiMinorAxis2Library.cpp" />
     <ClCompile Include="MinimumSemiMinorAxisLibrary.cpp" />
     <ClCompile Include="NormVectorLibrary.cpp" />
+    <ClCompile Include="Solution3LinearEqLibrary.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

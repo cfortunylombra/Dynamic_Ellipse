@@ -1,8 +1,9 @@
 ﻿  3PointsEllipseLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.cpp(8,148): warning C4273: 'Points3Ellipse': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.cpp(9,117): warning C4273: 'Points3Ellipse': inconsistent dll linkage
 D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.h(18,50): message : see previous definition of 'Points3Ellipse'
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.cpp(45,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.cpp(48,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
      Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.exp
+LINK : warning LNK4217: symbol 'Sol3LinEq' defined in 'Solution3LinearEqLibrary.obj' is imported by '3PointsEllipseLibrary.obj' in function 'Points3Ellipse'
 LINK : warning LNK4217: symbol 'UpdateLongitude' defined in 'UpdateLongitudeLibrary.obj' is imported by 'CenterGravityLibrary.obj' in function 'CenterGravity'
 LINK : warning LNK4217: symbol 'TrigSolve' defined in 'TrigonometricEqSolveLibrary.obj' is imported by 'MinimumSemiMinorAxis2Library.obj' in function 'MinAxis2'
 LINK : warning LNK4217: symbol 'Rad' defined in 'Constants.obj' is imported by 'Polar2RectangularLibrary.obj' in function 'Pol2Rect'
