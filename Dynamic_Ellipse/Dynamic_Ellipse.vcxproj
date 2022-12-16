@@ -154,6 +154,7 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2PointsPSOUTLibrary.h" />
     <ClInclude Include="3PointsEllipseLibrary.h" />
     <ClInclude Include="CenterGravityLibrary.h" />
     <ClInclude Include="Constants.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="UpdateLongitudeLibrary.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2PointsPSOUTLibrary.cpp" />
     <ClCompile Include="3PointsEllipseLibrary.cpp" />
     <ClCompile Include="CenterGravityLibrary.cpp" />
     <ClCompile Include="Constants.cpp" />
