@@ -6,5 +6,5 @@
 #define NORMLIBRARY_API __declspec(dllimport)
 #endif
 
-// Outputs: Satellite centered coordinates normalized (PTSatNormZ_X, PTSatNormZ_Y and PTSatNormZ_Z)
+// Outputs: Satellite centered coordinates normalized (PTSatNormZ_X, PTSatNormZ_Y and PTSatNormZ_Z); given in a list (float*)
 extern "C" NORMLIBRARY_API float* NormVector(float PTSat[]);

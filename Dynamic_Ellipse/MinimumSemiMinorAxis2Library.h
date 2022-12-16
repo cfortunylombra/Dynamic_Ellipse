@@ -7,7 +7,7 @@
 #endif 
 
 // Define Structure
-// Outputs: A0, B0, CK0 and Area0
+// Outputs: A0, B0, CK0 and Area0 (ellipse parameters)
 struct MinAxis2_struct {
     float A0;
     float B0;

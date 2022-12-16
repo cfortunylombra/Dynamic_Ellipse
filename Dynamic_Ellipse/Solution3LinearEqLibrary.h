@@ -7,7 +7,7 @@
 #endif
 
 // Define Structure
-// Outputs: A, B, CK
+// Outputs: A, B, CK (ellipse parameters)
 struct Sol3LinEq_struct {
     float A;
     float B;
