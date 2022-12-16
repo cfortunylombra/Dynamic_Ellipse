@@ -158,6 +158,7 @@
     <ClInclude Include="3PointsEllipseLibrary.h" />
     <ClInclude Include="CenterGravityLibrary.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="DeterminantLibrary.h" />
     <ClInclude Include="Dynamic_Ellipse.h" />
     <ClInclude Include="Earth2SatLibrary.h" />
     <ClInclude Include="EliminateLibrary.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="3PointsEllipseLibrary.cpp" />
     <ClCompile Include="CenterGravityLibrary.cpp" />
     <ClCompile Include="Constants.cpp" />
+    <ClCompile Include="DeterminantLibrary.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Dynamic_Ellipse.cpp" />
     <ClCompile Include="Earth2SatLibrary.cpp" />

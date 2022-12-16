@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "2PointsPSOUTLibrary.h"
+#include "DeterminantLibrary.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -18,6 +19,9 @@ TwoPts_struct TwoPts(const long& M, float** PSOut, float& A0, float& B0, float& 
 				float Y2 = PSOut[j][1];
 
 				// Call subroutine
+				float A = Det(X1, Y1, X2, Y2).A;
+				float B = Det(X1, Y1, X2, Y2).B;
+				float CK = Det(X1, Y1, X2, Y2).CK;
 
 				if ((A <= 0) || (B <= 0) || (4 * A * B - CK * CK <= 0)) {
 					continue;

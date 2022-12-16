@@ -75,6 +75,9 @@
     <ClInclude Include="2PointsPSOUTLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DeterminantLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dynamic_Ellipse.cpp">
@@ -132,6 +135,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="2PointsPSOUTLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DeterminantLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

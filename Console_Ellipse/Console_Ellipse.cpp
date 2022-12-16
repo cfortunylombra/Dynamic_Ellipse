@@ -16,6 +16,8 @@
 #include "TrigonometricEqSolveLibrary.h"
 #include "3PointsEllipseLibrary.h"
 #include "Solution3LinearEqLibrary.h"
+#include "2PointsPSOUTLibrary.h"
+#include "DeterminantLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -191,5 +193,11 @@ int main()
 
     //Test: Solution3LinearEqLibrary
     std::cout << "\nTest 14:" << std::endl;
+
+    //Test: 2PointsPSOUTLibrary
+    std::cout << "\nTest 15:" << std::endl;
+
+    //Test: DeterminantLibrary
+    std::cout << "\nTest 16:" << std::endl;
 
 }
