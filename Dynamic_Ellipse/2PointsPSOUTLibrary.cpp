@@ -7,18 +7,21 @@
 
 // Definition: This library determines an ellipse having the smallest area, containing two points of psout, and encompassing the rest (m-2)
 TwoPts_struct TwoPts(const long& M, float** PSOut, float& A0, float& B0, float& CK0, float& CoefAB) {
+	// Initialization
 	float Area0 = 1000001.0f;
 
+	// For-loop
 	for (int i = 0; i < M - 1; i++) {
 		float X1 = PSOut[i][0];
 		float Y1 = PSOut[i][1];
 
+		// For-loop
 		loop_300:
 			for (int j = i + 1; j < M; j++) {
 				float X2 = PSOut[j][0];
 				float Y2 = PSOut[j][1];
 
-				// Call subroutine
+				// Call DET subroutine from DeterminantLibrary
 				float A = Det(X1, Y1, X2, Y2).A;
 				float B = Det(X1, Y1, X2, Y2).B;
 				float CK = Det(X1, Y1, X2, Y2).CK;
@@ -31,6 +34,7 @@ TwoPts_struct TwoPts(const long& M, float** PSOut, float& A0, float& B0, float& 
 					continue;
 				}
 
+				// For-loop
 				for (int l = 0; l < M; l++) {
 					float XL = PSOut[l][0];
 					float YL = PSOut[l][1];

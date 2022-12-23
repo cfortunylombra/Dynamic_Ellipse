@@ -18,6 +18,7 @@
 #include "Solution3LinearEqLibrary.h"
 #include "2PointsPSOUTLibrary.h"
 #include "DeterminantLibrary.h"
+#include "OrientationLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -199,5 +200,8 @@ int main()
 
     //Test: DeterminantLibrary
     std::cout << "\nTest 16:" << std::endl;
+
+    //Test: OrientationLibrary
+    std::cout << "\nTest 17:" << std::endl;
 
 }

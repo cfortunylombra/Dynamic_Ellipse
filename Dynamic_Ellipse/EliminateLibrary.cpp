@@ -4,7 +4,6 @@
 
 // Definition: This library eliminates points which are automatically within the ellipse if other points are within or on the ellipse
 float** EliminatePoints(const long& n_points, float** PTSatRect) {
-	
 	//Initialization
 	float Invec[400];
 	float RLen[400];
@@ -128,7 +127,6 @@ float** EliminatePoints(const long& n_points, float** PTSatRect) {
 		PSOut[M][2] = PTSatRect[i][2];
 		M = M + 1;
 	}
-
 
 	// Return: PSOut with three columns (X,Y and Z)
 	return PSOut;

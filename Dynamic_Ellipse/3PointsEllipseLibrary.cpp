@@ -7,16 +7,20 @@
 
 // Definition: This library determines an ellipse containing 3 points of psout and encompassing the rest m-3
 Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, float& B0, float& CK0, float& CoefAB) {
+	// Initialization
 	float Area0 = 1000001.0f;
 
+	// For-loop
 	for (int i = 0; i < M - 2; i++) {
 		float X1 = PSOut[i][0];
 		float Y1 = PSOut[i][1];
 
+		// For-loop
 		for (int j = i + 1; j < M - 1; j++) {
 			float X2 = PSOut[j][0];
 			float Y2 = PSOut[j][1];
 
+			// For-loop
 			loop_200:
 				for (int k = j + 1; k < M; k++) {
 					float X3 = PSOut[k][0];
@@ -35,6 +39,7 @@ Points3Ellipse_struct Points3Ellipse(const long& M, float** PSOut, float& A0, fl
 						continue;
 					}
 
+					// For-loop
 					for (int l = 0; l < M; l++) {
 						float XL = PSOut[l][0];
 						float YL = PSOut[l][1];
