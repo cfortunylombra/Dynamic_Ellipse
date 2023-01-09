@@ -1,1 +1,120 @@
-﻿  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll
+﻿  2PointsPSOUTLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\2PointsPSOUTLibrary.cpp(9,101): warning C4273: 'TwoPts': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\2PointsPSOUTLibrary.h(18,45): message : see previous definition of 'TwoPts'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\2PointsPSOUTLibrary.cpp(49,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  3PointsEllipseLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.cpp(9,117): warning C4273: 'Points3Ellipse': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.h(18,50): message : see previous definition of 'Points3Ellipse'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\3PointsEllipseLibrary.cpp(53,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  AddPointingErrorLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingErrorLibrary.cpp(9,44): warning C4273: 'PtError': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingErrorLibrary.h(10,39): message : see previous definition of 'PtError'
+  AddPointingRotationalErrorsLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(100,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(112,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(138,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(154,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  AddRotationalErrorLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddRotationalErrorLibrary.cpp(8,57): warning C4273: 'RotError': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddRotationalErrorLibrary.h(10,40): message : see previous definition of 'RotError'
+  AddStationKeepingErrorLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddStationKeepingErrorLibrary.cpp(8,44): warning C4273: 'SkError': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddStationKeepingErrorLibrary.h(10,38): message : see previous definition of 'SkError'
+  CenterGravityLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\CenterGravityLibrary.cpp(8,130): warning C4273: 'CenterGravity': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\CenterGravityLibrary.h(16,47): message : see previous definition of 'CenterGravity'
+  Constants.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.cpp(8,12): warning C4273: 'Pi': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.h(9,35): message : see previous definition of 'Pi'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.cpp(10,13): warning C4273: 'Rad': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.h(10,35): message : see previous definition of 'Rad'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.cpp(12,12): warning C4273: 'NMax': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.h(11,33): message : see previous definition of 'NMax'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.cpp(14,21): warning C4273: 'EarthRadius': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.h(12,35): message : see previous definition of 'EarthRadius'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.cpp(16,29): warning C4273: 'GEOAlt_EarthRad_rat': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Constants.h(13,35): message : see previous definition of 'GEOAlt_EarthRad_rat'
+  DeterminantLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\DeterminantLibrary.cpp(8,60): warning C4273: 'Det': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\DeterminantLibrary.h(17,38): message : see previous definition of 'Det'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\DeterminantLibrary.cpp(15,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Earth2SatLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Earth2SatLibrary.cpp(6,57): warning C4273: 'Earth2Sat': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Earth2SatLibrary.h(10,40): message : see previous definition of 'Earth2Sat'
+  EliminateLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.cpp(6,66): warning C4273: 'EliminatePoints': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.h(10,38): message : see previous definition of 'EliminatePoints'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\EliminateLibrary.cpp(18,22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  MinimumSemiMinorAxis2Library.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(9,103): warning C4273: 'MinAxis2': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.h(18,48): message : see previous definition of 'MinAxis2'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(15,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(17,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(22,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(48,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(55,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(80,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(84,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(87,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(99,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(101,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxis2Library.cpp(121,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  MinimumSemiMinorAxisLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(8,103): warning C4273: 'MinAxis1': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.h(18,48): message : see previous definition of 'MinAxis1'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(10,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(17,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(26,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(28,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\MinimumSemiMinorAxisLibrary.cpp(43,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  NormVectorLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\NormVectorLibrary.cpp(6,34): warning C4273: 'NormVector': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\NormVectorLibrary.h(10,35): message : see previous definition of 'NormVector'
+  OrientationLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\OrientationLibrary.cpp(7,53): warning C4273: 'Orient': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\OrientationLibrary.h(17,49): message : see previous definition of 'Orient'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\OrientationLibrary.cpp(27,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\OrientationLibrary.cpp(30,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\OrientationLibrary.cpp(33,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Solution3LinearEqLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Solution3LinearEqLibrary.cpp(6,94): warning C4273: 'Sol3LinEq': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Solution3LinearEqLibrary.h(17,47): message : see previous definition of 'Sol3LinEq'
+  PointsCheckEllipseLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\PointsCheckEllipseLibrary.cpp(6,138): warning C4273: 'PointsCheck': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\PointsCheckEllipseLibrary.h(18,54): message : see previous definition of 'PointsCheck'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\PointsCheckEllipseLibrary.cpp(22,9): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Polar2RectangularLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Polar2RectangularLibrary.cpp(7,67): warning C4273: 'Pol2Rect': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Polar2RectangularLibrary.h(17,48): message : see previous definition of 'Pol2Rect'
+  Sat2EarthLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Sat2EarthLibrary.cpp(6,55): warning C4273: 'Sat2Earth': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\Sat2EarthLibrary.h(10,40): message : see previous definition of 'Sat2Earth'
+  TransformationMatrixLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TransformationMatrixLibrary.cpp(8,124): warning C4273: 'TransformationMatrix': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TransformationMatrixLibrary.h(16,57): message : see previous definition of 'TransformationMatrix'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TransformationMatrixLibrary.cpp(20,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TransformationMatrixLibrary.cpp(28,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Compiling...
+  TrigonometricEqSolveLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(9,109): warning C4273: 'TrigSolve': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.h(16,45): message : see previous definition of 'TrigSolve'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(29,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(31,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(43,22): warning C4305: '=': truncation from 'double' to 'float'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(46,21): warning C4305: '=': truncation from 'double' to 'float'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(54,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(57,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(62,28): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(65,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(73,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TrigonometricEqSolveLibrary.cpp(76,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  UpdateLongitudeLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\UpdateLongitudeLibrary.cpp(7,98): warning C4273: 'UpdateLongitude': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\UpdateLongitudeLibrary.h(10,41): message : see previous definition of 'UpdateLongitude'
+     Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.exp
+  Generating code
+  30 of 40 functions (75.0%) were compiled, the rest were copied from previous compilation.
+    24 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll

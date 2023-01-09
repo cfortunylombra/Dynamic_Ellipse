@@ -1,25 +1,4 @@
-﻿  AddPointingRotationalErrorsLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(33,20): error C2065: 'PTOut': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(50,6): error C2065: 'iPTErr': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(58,17): error C2065: 'XMin': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(58,24): error C2065: 'XPtErr': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(59,8): error C2065: 'Xdif': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(61,63): error C2065: 'Rad': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(61,69): error C2065: 'Rad': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(65,7): error C2065: 'PTMed2': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(78,7): error C2065: 'PTMed2': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(78,25): error C2065: 'PT7Out': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(78,32): error C2065: 'k': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(91,7): error C2065: 'PTMed2': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(98,8): error C2065: 'iRotErr': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(105,17): error C2065: 'PTMed2': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(117,8): error C2065: 'PxRect': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(117,26): error C2065: 'PT3Out': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(134,7): error C2065: 'PxRect': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(134,22): error C2065: 'PTMed2': undeclared identifier
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(143,2): error C2561: 'Sol3LinEq': function must return a value
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(8): message : see declaration of 'Sol3LinEq'
-  AddStationKeepingErrorLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddStationKeepingErrorLibrary.cpp(8,44): warning C4273: 'SkError': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddStationKeepingErrorLibrary.h(10,38): message : see previous definition of 'SkError'
-  Generating Code...
+﻿  AddRotationalErrorLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddRotationalErrorLibrary.cpp(8,57): warning C4273: 'RotError': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddRotationalErrorLibrary.h(10,40): message : see previous definition of 'RotError'
+  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll

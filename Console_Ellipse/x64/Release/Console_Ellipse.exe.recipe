@@ -2,6 +2,9 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\Console_Ellipse.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

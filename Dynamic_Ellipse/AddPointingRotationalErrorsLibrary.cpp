@@ -1,18 +1,34 @@
 #include "pch.h"
 #include "AddPointingRotationalErrorsLibrary.h"
+#include "Constants.h"
+#include "AddStationKeepingErrorLibrary.h"
+#include "AddPointingErrorLibrary.h"
+#include "AddRotationalErrorLibrary.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 // Definition: This library extends the points to be considered so that the various pointing and rotational errors can be taken into account
-float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
+float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& XMin, float& XPtErr, float& TanPe, float& CROT, float& SROT, float& iSKErr, float& iPTErr, float& iRotErr) {
 	// Initialization
 	float Mx = N;
 	float* PTIn = new float[3];
 	float** PTMed1;
-	PTMed1 = new float* [3];
-	for (int i = 0; i < 3; i++) {
+	PTMed1 = new float* [400];
+	for (int i = 0; i < 400; i++) {
 		PTMed1[i] = new float[3];
+	}
+
+	float** PTMed2;
+	PTMed2 = new float* [400];
+	for (int i = 0; i < 400; i++) {
+		PTMed2[i] = new float[3];
+	}
+
+	float** PxRect;
+	PxRect = new float* [400];
+	for (int i = 0; i < 400; i++) {
+		PxRect[i] = new float[3];
 	}
 
 	// Check Station Keeping Error is 1 (True)
@@ -26,7 +42,7 @@ float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
 
 			float DifAng = AngDif[i];
 			// Call subroutine SKErr
-			//float* PTOut = SKErr(PTIn, DifAng);
+			float* PTOut = SkError(PTIn, DifAng);
 
 			// For-loop
 			for (int j = 0; j < 3; j++) {
@@ -46,7 +62,7 @@ float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
 	}
 
 	// Check Pointing Error is 1 (True)
-	float NTot = 0;
+	int NTot = -1;
 	if (iPTErr == 1) {
 		// For-loop
 		for (int i = 0; i < Mx; i++) {
@@ -56,7 +72,7 @@ float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
 			}
 
 			float XDif = XMin - XPtErr;
-			if (Xdif <= 0) {
+			if (XDif <= 0) {
 				XDif = 0;
 				if (PTIn[0] * PTIn[0] + PTIn[1] * PTIn[1] < XDif * XDif / Rad / Rad) {
 					NTot = NTot + 1;
@@ -67,15 +83,15 @@ float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
 				}
 				else {
 					// Call subroutine PTErr
-					// float** PT7Out = PTErr(PTIn);
+					float** PT7Out = PtError(PTIn, TanPe);
 
 					// For-loop
 					for (int k = 0; k < 7; k++) {
 						NTot = NTot + 1;
-					}
-					// For-loop
-					for (int j = 0; j < 3; j++) {
-						PTMed2[NTot][j] = PT7Out[k][j];
+						// For-loop
+						for (int j = 0; j < 3; j++) {
+							PTMed2[NTot][j] = PT7Out[k][j];
+						}
 					}
 				}
 			}
@@ -96,17 +112,17 @@ float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
 			Mx = NTot;
 
 			if (iRotErr == 1) {
-				NTot = 0;
+				NTot = -1;
 
 				// For-loop
 				for (int i = 0; i < Mx; i++) {
 					// For-loop
-					for (int j; j < 3; j++) {
+					for (int j = 0; j < 3; j++) {
 						PTIn[j] = PTMed2[i][j];
 					}
 
 					// Call subroutine RotErr
-					//
+					float** PT3Out = RotError(PTIn, CROT, SROT);
 
 					// For-loop
 					for (int k = 0; k < 3; k++) {
@@ -140,5 +156,5 @@ float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& iSKErr) {
 		}
 	}
 
-	return;
+	return PxRect;
 }

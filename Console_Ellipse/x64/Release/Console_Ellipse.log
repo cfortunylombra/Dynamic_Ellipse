@@ -1,2 +1,7 @@
 ﻿  Console_Ellipse.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Console_Ellipse\Console_Ellipse.cpp(4,10): fatal  error C1083: Cannot open include file: 'Constants.h': No such file or directory
+  Generating code
+  2 of 13 functions (15.4%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Console_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\Console_Ellipse.exe

@@ -7,4 +7,4 @@
 #endif 
 
 // Outputs: PTSOut; given in a list (float**)
-extern "C" ROTERRORLIBRARY_API float** RotError(float* PTIn);
+extern "C" ROTERRORLIBRARY_API float** RotError(float* PTIn, float& CROT, float& SROT);
