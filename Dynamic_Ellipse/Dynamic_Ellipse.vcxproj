@@ -157,6 +157,7 @@
     <ClInclude Include="2PointsPSOUTLibrary.h" />
     <ClInclude Include="3PointsEllipseLibrary.h" />
     <ClInclude Include="AddPointingRotationalErrorsLibrary.h" />
+    <ClInclude Include="AddStationKeepingErrorLibrary.h" />
     <ClInclude Include="CenterGravityLibrary.h" />
     <ClInclude Include="Constants.h" />
     <ClInclude Include="DeterminantLibrary.h" />
@@ -181,6 +182,7 @@
     <ClCompile Include="2PointsPSOUTLibrary.cpp" />
     <ClCompile Include="3PointsEllipseLibrary.cpp" />
     <ClCompile Include="AddPointingRotationalErrorsLibrary.cpp" />
+    <ClCompile Include="AddStationKeepingErrorLibrary.cpp" />
     <ClCompile Include="CenterGravityLibrary.cpp" />
     <ClCompile Include="Constants.cpp" />
     <ClCompile Include="DeterminantLibrary.cpp" />

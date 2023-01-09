@@ -19,6 +19,8 @@
 #include "2PointsPSOUTLibrary.h"
 #include "DeterminantLibrary.h"
 #include "OrientationLibrary.h"
+//#include "AddPointingRotationalErrorsLibrary.h"
+//#include "AddStationKeepingErrorLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -204,4 +206,9 @@ int main()
     //Test: OrientationLibrary
     std::cout << "\nTest 17:" << std::endl;
 
+    //Test: AddPointingRotationalErrorsLibrary
+    std::cout << "\nTest 18:" << std::endl;
+
+    //Test: AddStationKeepingErrorLibrary
+    std::cout << "\nTest 19:" << std::endl;
 }
