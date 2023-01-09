@@ -81,6 +81,9 @@
     <ClInclude Include="OrientationLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AddPointingRotationalErrorsLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dynamic_Ellipse.cpp">
@@ -144,6 +147,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="OrientationLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddPointingRotationalErrorsLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
