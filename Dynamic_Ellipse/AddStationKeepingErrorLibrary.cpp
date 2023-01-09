@@ -20,7 +20,7 @@ float* SkError(float* PTIn, float& DifAng) {
 	}
 
 	else {
-		FAC = (1.0 + TanSk / D) / (1.0 - TanSk * D);
+		FAC = (1.0f + TanSk / D) / (1.0f - TanSk * D);
 	}
 
 	float* PTOut = new float[3];

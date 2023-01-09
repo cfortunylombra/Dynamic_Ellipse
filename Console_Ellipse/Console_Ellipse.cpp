@@ -20,7 +20,8 @@
 #include "DeterminantLibrary.h"
 #include "OrientationLibrary.h"
 //#include "AddPointingRotationalErrorsLibrary.h"
-//#include "AddStationKeepingErrorLibrary.h"
+#include "AddStationKeepingErrorLibrary.h"
+#include "AddPointingErrorLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -211,4 +212,11 @@ int main()
 
     //Test: AddStationKeepingErrorLibrary
     std::cout << "\nTest 19:" << std::endl;
+
+    //Test: AddPointingErrorLibrary
+    std::cout << "\nTest 20:" << std::endl;
+
+    //Test: AddRotationalErrorLibrary
+    std::cout << "\nTest 21:" << std::endl;
+
 }
