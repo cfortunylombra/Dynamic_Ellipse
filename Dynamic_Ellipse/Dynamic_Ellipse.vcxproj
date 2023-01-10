@@ -170,6 +170,7 @@
     <ClInclude Include="EdgeEllipseLibrary.h" />
     <ClInclude Include="EliminateLibrary.h" />
     <ClInclude Include="EllipseViewLibrary.h" />
+    <ClInclude Include="FindColinearPointLibrary.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MinimumSemiMinorAxis2Library.h" />
     <ClInclude Include="MinimumSemiMinorAxisLibrary.h" />
@@ -204,6 +205,7 @@
     <ClCompile Include="EdgeEllipseLibrary.cpp" />
     <ClCompile Include="EliminateLibrary.cpp" />
     <ClCompile Include="EllipseViewLibrary.cpp" />
+    <ClCompile Include="FindColinearPointLibrary.cpp" />
     <ClCompile Include="MinimumSemiMinorAxis2Library.cpp" />
     <ClCompile Include="MinimumSemiMinorAxisLibrary.cpp" />
     <ClCompile Include="NormVectorLibrary.cpp" />
