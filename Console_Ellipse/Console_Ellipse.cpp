@@ -25,6 +25,8 @@
 #include "AddRotationalErrorLibrary.h"
 #include "DisplacementEquatPlaneLibrary.h"
 #include "ProjectionSatEllipseLibrary.h"
+#include "XPrimeYPrime2XYLibrary.h"
+#include "EdgeEllipseLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -227,5 +229,11 @@ int main()
 
     //Test: ProjectionSatEllipseLibrary
     std::cout << "\nTest 23:" << std::endl;
+
+    //Test: XPrimeYPrime2XYLibrary
+    std::cout << "\nTest 24:" << std::endl;
+
+    //Test: EdgeEllipseLibrary
+    std::cout << "\nTest 25:" << std::endl;
 
 }

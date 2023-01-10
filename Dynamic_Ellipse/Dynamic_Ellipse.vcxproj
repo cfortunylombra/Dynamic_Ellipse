@@ -166,6 +166,7 @@
     <ClInclude Include="DisplacementEquatPlaneLibrary.h" />
     <ClInclude Include="Dynamic_Ellipse.h" />
     <ClInclude Include="Earth2SatLibrary.h" />
+    <ClInclude Include="EdgeEllipseLibrary.h" />
     <ClInclude Include="EliminateLibrary.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MinimumSemiMinorAxis2Library.h" />
@@ -181,6 +182,7 @@
     <ClInclude Include="TransformationMatrixLibrary.h" />
     <ClInclude Include="TrigonometricEqSolveLibrary.h" />
     <ClInclude Include="UpdateLongitudeLibrary.h" />
+    <ClInclude Include="XPrimeYPrime2XYLibrary.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2PointsPSOUTLibrary.cpp" />
@@ -196,6 +198,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Dynamic_Ellipse.cpp" />
     <ClCompile Include="Earth2SatLibrary.cpp" />
+    <ClCompile Include="EdgeEllipseLibrary.cpp" />
     <ClCompile Include="EliminateLibrary.cpp" />
     <ClCompile Include="MinimumSemiMinorAxis2Library.cpp" />
     <ClCompile Include="MinimumSemiMinorAxisLibrary.cpp" />
@@ -215,6 +218,7 @@
     <ClCompile Include="TransformationMatrixLibrary.cpp" />
     <ClCompile Include="TrigonometricEqSolveLibrary.cpp" />
     <ClCompile Include="UpdateLongitudeLibrary.cpp" />
+    <ClCompile Include="XPrimeYPrime2XYLibrary.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
