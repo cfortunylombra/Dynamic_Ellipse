@@ -24,6 +24,7 @@
 #include "AddPointingErrorLibrary.h"
 #include "AddRotationalErrorLibrary.h"
 #include "DisplacementEquatPlaneLibrary.h"
+#include "ProjectionSatEllipseLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -223,5 +224,8 @@ int main()
 
     //Test: DisplacementEqualPlaneLibrary
     std::cout << "\nTest 22:" << std::endl;
+
+    //Test: ProjectionSatEllipseLibrary
+    std::cout << "\nTest 23:" << std::endl;
 
 }
