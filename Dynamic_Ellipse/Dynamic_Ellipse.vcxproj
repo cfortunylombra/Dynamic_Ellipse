@@ -163,6 +163,7 @@
     <ClInclude Include="AngleDiffStationKeepingLibrary.h" />
     <ClInclude Include="CenterGravityLibrary.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="ConvexLibrary.h" />
     <ClInclude Include="DeterminantLibrary.h" />
     <ClInclude Include="DisplacementEquatPlaneLibrary.h" />
     <ClInclude Include="Dynamic_Ellipse.h" />
@@ -197,6 +198,7 @@
     <ClCompile Include="AngleDiffStationKeepingLibrary.cpp" />
     <ClCompile Include="CenterGravityLibrary.cpp" />
     <ClCompile Include="Constants.cpp" />
+    <ClCompile Include="ConvexLibrary.cpp" />
     <ClCompile Include="DeterminantLibrary.cpp" />
     <ClCompile Include="DisplacementEquatPlaneLibrary.cpp" />
     <ClCompile Include="dllmain.cpp" />

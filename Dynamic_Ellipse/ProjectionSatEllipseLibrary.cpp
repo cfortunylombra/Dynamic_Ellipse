@@ -1,34 +1,46 @@
 #include "pch.h"
 #include "ProjectionSatEllipseLibrary.h"
+#include "TransformationMatrixLibrary.h"
+#include "EdgeEllipseLibrary.h"
+#include "XPrimeYPrime2XYLibrary.h"
+#include "Sat2EarthLibrary.h"
 #include "Constants.h"
 #include <iostream>
 
 // Definition: This library projects satellite ellipse onto earth
-float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omega) {
+float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omega, float& SatLon, float* PtSat) {
 	float** Ang;
 	Ang = new float* [26];
 	for (int i = 0; i < 26; i++) {
 		Ang[i] = new float[2];
 	}
 
+	float FAC = 0.0f;
+
 	float RK2 = std::pow(GEOAlt_EarthRad_rat,2);
 
 	// Call TraMat
+	float** MsTog = TransformationMatrix(SatLon, Theta, Phi).MatrixSat2EC;
 
 	// Call ElPoly
+	float** ElPts = ElPoly(Alpha, Beta);
 
 	PtSat[2] = 1.0f;
 	
 	//for-loop
-	for (int i = 0, i < 36; i++) {
-		XPrI = ElPts[i][0];
-		YPrI = ElPts[i][1];
+	for (int i = 0; i < 36; i++) {
+		float XPrI = ElPts[i][0];
+		float YPrI = ElPts[i][1];
 
 		// Call rotate
+		float X = Rotate(XPrI, YPrI, Omega).X;
+		float Y = Rotate(XPrI, YPrI, Omega).Y;
+
 		PtSat[0] = X;
 		PtSat[1] = Y;
 
 		// Call SatoErt
+		float* PtErth = Sat2Earth(MsTog, PtSat);
 
 		float Xe = PtErth[0];
 		float Ye = PtErth[1];
@@ -38,7 +50,7 @@ float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omeg
 		float Qt = Xe * Xe * RK2 - (RK2 - 1) * R2;
 
 		if (Qt >= 0) {
-			float FAC = (-Xe * GEOAlt_EarthRad_rat - std::sqrt(Qt)) / R2;
+			FAC = (-Xe * GEOAlt_EarthRad_rat - std::sqrt(Qt)) / R2;
 			Xe = GEOAlt_EarthRad_rat + FAC * Xe;
 			Ye = FAC * Ye;
 			Ze = FAC * Ze;

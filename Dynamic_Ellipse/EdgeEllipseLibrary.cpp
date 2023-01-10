@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "EdgeEllipseLibrary.h"
+#include "Constants.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>

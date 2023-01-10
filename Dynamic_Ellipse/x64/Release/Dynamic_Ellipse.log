@@ -1,14 +1,11 @@
-﻿  AddPointingRotationalErrorsLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(12,171): warning C4273: 'XTNDEL': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.h(10,43): message : see previous definition of 'XTNDEL'
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(100,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(112,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(138,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(154,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+﻿  ConvexLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.cpp(8,44): warning C4273: 'Convex': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.h(10,39): message : see previous definition of 'Convex'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.cpp(9,20): warning C4305: 'initializing': truncation from 'double' to 'float'
      Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.exp
   Generating code
-  1 of 43 functions ( 2.3%) were compiled, the rest were copied from previous compilation.
+  3 of 49 functions ( 6.1%) were compiled, the rest were copied from previous compilation.
     1 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    2 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll

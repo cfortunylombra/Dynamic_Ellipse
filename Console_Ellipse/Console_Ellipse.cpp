@@ -29,6 +29,8 @@
 #include "EdgeEllipseLibrary.h"
 #include "EllipseViewLibrary.h"
 #include "AngleDiffStationKeepingLibrary.h"
+#include "FindColinearPointLibrary.h"
+#include "ConvexLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -243,4 +245,10 @@ int main()
 
     //Test: AngleDiffStationKeepingLibrary
     std::cout << "\nTest 27:" << std::endl;
+
+    //Test: FindColinearPointLibrary
+    std::cout << "\nTest 28:" << std::endl;
+
+    //Test: ConvexLibrary
+    std::cout << "\nTest 29:" << std::endl;
 }

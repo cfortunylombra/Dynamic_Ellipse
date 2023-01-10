@@ -114,6 +114,9 @@
     <ClInclude Include="FindColinearPointLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConvexLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dynamic_Ellipse.cpp">
@@ -210,6 +213,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FindColinearPointLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvexLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
