@@ -11,4 +11,5 @@ extern "C" CONSTLIBRARY_API float Rad; //Radian
 extern "C" CONSTLIBRARY_API int NMax; //Upper limit number of stations
 extern "C" CONSTLIBRARY_API float EarthRadius; //Earth radius in m
 extern "C" CONSTLIBRARY_API float GEOAlt_EarthRad_rat; //GEO altitude/Earth radius
+extern "C" CONSTLIBRARY_API float TanSk_rad; //Tan(0.1deg)
 

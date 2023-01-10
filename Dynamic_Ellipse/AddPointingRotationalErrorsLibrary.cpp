@@ -9,7 +9,7 @@
 #include <math.h>
 
 // Definition: This library extends the points to be considered so that the various pointing and rotational errors can be taken into account
-float** Sol3LinEq(float& N, float** PSRect, float* AngDif, float& XMin, float& XPtErr, float& TanPe, float& CROT, float& SROT, float& iSKErr, float& iPTErr, float& iRotErr) {
+float** XTNDEL(float& N, float** PSRect, float* AngDif, float& XMin, float& XPtErr, float& TanPe, float& CROT, float& SROT, float& iSKErr, float& iPTErr, float& iRotErr) {
 	// Initialization
 	float Mx = N;
 	float* PTIn = new float[3];

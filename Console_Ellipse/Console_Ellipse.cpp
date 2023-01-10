@@ -19,9 +19,11 @@
 #include "2PointsPSOUTLibrary.h"
 #include "DeterminantLibrary.h"
 #include "OrientationLibrary.h"
-//#include "AddPointingRotationalErrorsLibrary.h"
+#include "AddPointingRotationalErrorsLibrary.h"
 #include "AddStationKeepingErrorLibrary.h"
 #include "AddPointingErrorLibrary.h"
+#include "AddRotationalErrorLibrary.h"
+#include "DisplacementEquatPlaneLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -218,5 +220,8 @@ int main()
 
     //Test: AddRotationalErrorLibrary
     std::cout << "\nTest 21:" << std::endl;
+
+    //Test: DisplacementEqualPlaneLibrary
+    std::cout << "\nTest 22:" << std::endl;
 
 }
