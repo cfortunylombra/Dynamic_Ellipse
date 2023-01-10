@@ -27,6 +27,8 @@
 #include "ProjectionSatEllipseLibrary.h"
 #include "XPrimeYPrime2XYLibrary.h"
 #include "EdgeEllipseLibrary.h"
+#include "EllipseViewLibrary.h"
+#include "AngleDiffStationKeepingLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -236,4 +238,9 @@ int main()
     //Test: EdgeEllipseLibrary
     std::cout << "\nTest 25:" << std::endl;
 
+    //Test: EllipseViewLibrary
+    std::cout << "\nTest 26:" << std::endl;
+
+    //Test: AngleDiffStationKeepingLibrary
+    std::cout << "\nTest 27:" << std::endl;
 }
