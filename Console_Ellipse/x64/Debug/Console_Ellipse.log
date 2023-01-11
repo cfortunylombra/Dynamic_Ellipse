@@ -1,2 +1,1 @@
-﻿  Console_Ellipse.cpp
-  Console_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\Console_Ellipse.exe
+﻿MSBUILD : error MSB4166: Child node "2" exited prematurely. Shutting down. Diagnostic information may be found in files in "C:\Users\lombrana\AppData\Local\Temp\2\" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.

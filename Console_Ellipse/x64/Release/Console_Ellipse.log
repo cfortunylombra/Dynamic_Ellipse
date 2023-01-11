@@ -1,2 +1,6 @@
 ﻿  Console_Ellipse.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Console_Ellipse\Console_Ellipse.cpp(4,10): fatal  error C1083: Cannot open include file: 'Constants.h': No such file or directory
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 13 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Console_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\Console_Ellipse.exe

@@ -154,33 +154,79 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2PointsPSOUTLibrary.h" />
+    <ClInclude Include="3PointsEllipseLibrary.h" />
+    <ClInclude Include="AddPointingErrorLibrary.h" />
+    <ClInclude Include="AddPointingRotationalErrorsLibrary.h" />
+    <ClInclude Include="AddRotationalErrorLibrary.h" />
+    <ClInclude Include="AddStationKeepingErrorLibrary.h" />
+    <ClInclude Include="AngleDiffStationKeepingLibrary.h" />
     <ClInclude Include="CenterGravityLibrary.h" />
     <ClInclude Include="Constants.h" />
+    <ClInclude Include="ConvexLibrary.h" />
+    <ClInclude Include="DeterminantLibrary.h" />
+    <ClInclude Include="DisplacementEquatPlaneLibrary.h" />
     <ClInclude Include="Dynamic_Ellipse.h" />
     <ClInclude Include="Earth2SatLibrary.h" />
+    <ClInclude Include="EdgeEllipseLibrary.h" />
+    <ClInclude Include="EliminateLibrary.h" />
+    <ClInclude Include="EllipseViewLibrary.h" />
+    <ClInclude Include="FindColinearPointLibrary.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="MinimumSemiMinorAxis2Library.h" />
+    <ClInclude Include="MinimumSemiMinorAxisLibrary.h" />
+    <ClInclude Include="NormVectorLibrary.h" />
+    <ClInclude Include="OrientationLibrary.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PointsCheckEllipseLibrary.h" />
     <ClInclude Include="Polar2RectangularLibrary.h" />
+    <ClInclude Include="ProjectionSatEllipseLibrary.h" />
     <ClInclude Include="Sat2EarthLibrary.h" />
+    <ClInclude Include="Solution3LinearEqLibrary.h" />
     <ClInclude Include="TransformationMatrixLibrary.h" />
+    <ClInclude Include="TrigonometricEqSolveLibrary.h" />
     <ClInclude Include="UpdateLongitudeLibrary.h" />
+    <ClInclude Include="XPrimeYPrime2XYLibrary.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="2PointsPSOUTLibrary.cpp" />
+    <ClCompile Include="3PointsEllipseLibrary.cpp" />
+    <ClCompile Include="AddPointingErrorLibrary.cpp" />
+    <ClCompile Include="AddPointingRotationalErrorsLibrary.cpp" />
+    <ClCompile Include="AddRotationalErrorLibrary.cpp" />
+    <ClCompile Include="AddStationKeepingErrorLibrary.cpp" />
+    <ClCompile Include="AngleDiffStationKeepingLibrary.cpp" />
     <ClCompile Include="CenterGravityLibrary.cpp" />
     <ClCompile Include="Constants.cpp" />
+    <ClCompile Include="ConvexLibrary.cpp" />
+    <ClCompile Include="DeterminantLibrary.cpp" />
+    <ClCompile Include="DisplacementEquatPlaneLibrary.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Dynamic_Ellipse.cpp" />
     <ClCompile Include="Earth2SatLibrary.cpp" />
+    <ClCompile Include="EdgeEllipseLibrary.cpp" />
+    <ClCompile Include="EliminateLibrary.cpp" />
+    <ClCompile Include="EllipseViewLibrary.cpp" />
+    <ClCompile Include="FindColinearPointLibrary.cpp" />
+    <ClCompile Include="MinimumSemiMinorAxis2Library.cpp" />
+    <ClCompile Include="MinimumSemiMinorAxisLibrary.cpp" />
+    <ClCompile Include="NormVectorLibrary.cpp" />
+    <ClCompile Include="OrientationLibrary.cpp" />
+    <ClCompile Include="ProjectionSatEllipseLibrary.cpp" />
+    <ClCompile Include="Solution3LinearEqLibrary.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="PointsCheckEllipseLibrary.cpp" />
     <ClCompile Include="Polar2RectangularLibrary.cpp" />
     <ClCompile Include="Sat2EarthLibrary.cpp" />
     <ClCompile Include="TransformationMatrixLibrary.cpp" />
+    <ClCompile Include="TrigonometricEqSolveLibrary.cpp" />
     <ClCompile Include="UpdateLongitudeLibrary.cpp" />
+    <ClCompile Include="XPrimeYPrime2XYLibrary.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,7 +5,7 @@
 // Definition: This library transforms satellite centered coordinates to earth centered coordinates
 float* Sat2Earth(float** MatrixSat2EC, float PTSat[]) {
 	// Initialization of earth centered coordinates
-	float PTEarth[3];
+	float *PTEarth = new float[3];
 
 	// Perform matrix multiplication
 	for (int i = 0; i < 3; i++) {
@@ -16,5 +16,5 @@ float* Sat2Earth(float** MatrixSat2EC, float PTSat[]) {
 	}
 
 	// Return: Earth centered coordinates
-	return (float*)PTEarth;
+	return PTEarth;
 }

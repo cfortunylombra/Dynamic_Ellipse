@@ -6,5 +6,5 @@
 #define UPDATELONGLIBRARY_API __declspec(dllimport)
 #endif 
 
-// Outputs: Float array with longitudes of the stations
+// Outputs: Float array with longitudes of the stations; given in a list (float*)
 extern "C" UPDATELONGLIBRARY_API float* UpdateLongitude(const long& n_points, const float& orbital_position, float points_long[]);

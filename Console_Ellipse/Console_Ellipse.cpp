@@ -8,6 +8,29 @@
 #include "TransformationMatrixLibrary.h"
 #include "Earth2SatLibrary.h"
 #include "Sat2EarthLibrary.h"
+#include "NormVectorLibrary.h"
+#include "EliminateLibrary.h"
+#include "PointsCheckEllipseLibrary.h"
+#include "MinimumSemiMinorAxisLibrary.h"
+#include "MinimumSemiMinorAxis2Library.h"
+#include "TrigonometricEqSolveLibrary.h"
+#include "3PointsEllipseLibrary.h"
+#include "Solution3LinearEqLibrary.h"
+#include "2PointsPSOUTLibrary.h"
+#include "DeterminantLibrary.h"
+#include "OrientationLibrary.h"
+#include "AddPointingRotationalErrorsLibrary.h"
+#include "AddStationKeepingErrorLibrary.h"
+#include "AddPointingErrorLibrary.h"
+#include "AddRotationalErrorLibrary.h"
+#include "DisplacementEquatPlaneLibrary.h"
+#include "ProjectionSatEllipseLibrary.h"
+#include "XPrimeYPrime2XYLibrary.h"
+#include "EdgeEllipseLibrary.h"
+#include "EllipseViewLibrary.h"
+#include "AngleDiffStationKeepingLibrary.h"
+#include "FindColinearPointLibrary.h"
+#include "ConvexLibrary.h"
 #include <iostream>
 #include <algorithm>
 
@@ -108,7 +131,7 @@ int main()
 
     // Test: Update Logitudes (Trying with 225deg)
     std::cout << "\nTest 2:" << std::endl;
-    std::cout << "Previous longitude in deg of St2:" << UpdateLongitude(npts_test1, orbpos_test1, tlon_test1)[2] << std::endl;
+    std::cout << "Previous longitude in deg of St2:" << tlon_test1[2] << std::endl;
     std::cout << "New longitude in deg of St2:" << UpdateLongitude(npts_test1, orbpos_test1, tlon_test1)[2] << std::endl;
 
     // Test: Change of coordinates
@@ -136,4 +159,96 @@ int main()
     PTSat[1] = 0.0f;
     PTSat[2] = 0.0f;
     std::cout << "PTEarth[0]:" << Sat2Earth(Matrices.MatrixSat2EC, PTSat)[0] << std::endl;
+
+    //Test: Norm Vector to have a unit z-component
+    std::cout << "\nTest 7:" << std::endl;
+    float PTSat_Z[3];
+    PTSat_Z[0] = 2*EarthRadius;
+    PTSat_Z[1] = 3*EarthRadius;
+    PTSat_Z[2] = EarthRadius;
+    std::cout << "PTSAT_norm[0]:" << NormVector(PTSat_Z)[1] << std::endl;
+
+    //Test: Eliminate points which are automatically within the ellipse if other points are within or on the ellipse
+    std::cout << "\nTest 8:" << std::endl;
+    float** PTSatRect_test1;
+    PTSatRect_test1 = new float* [400];
+    for (int i = 0; i < 400; i++) {
+        PTSatRect_test1[i] = new float[3];
+    }
+    PTSatRect_test1[0][0] = EarthRadius;
+    PTSatRect_test1[0][1] = 0.0f;
+    PTSatRect_test1[0][2] = 0.0f;
+    PTSatRect_test1[1][0] = 0.0f;
+    PTSatRect_test1[1][1] = EarthRadius;
+    PTSatRect_test1[1][2] = 0.0f;
+    PTSatRect_test1[2][0] = 0.0f;
+    PTSatRect_test1[2][1] = 0.0f;
+    PTSatRect_test1[2][2] = EarthRadius;
+    PTSatRect_test1[3][0] = EarthRadius / std::sqrt(3.0f);
+    PTSatRect_test1[3][1] = EarthRadius / std::sqrt(3.0f);
+    PTSatRect_test1[3][2] = EarthRadius / std::sqrt(3.0f);
+    std::cout << "PTOut[0]:" << EliminatePoints(npts_test1,PTSatRect_test1)[2][2] << std::endl; // if you try [3][2] gives error!
+
+    //Test: PointsCheckEllipseLibrary
+    std::cout << "\nTest 9:" << std::endl;
+
+    //Test: MinimumSemiMinorAxisLibrary
+    std::cout << "\nTest 10:" << std::endl;
+
+    //Test: MinimumSemiMinorAxis2Library
+    std::cout << "\nTest 11:" << std::endl;
+
+    //Test: TrigonometricEqSolveLibrary
+    std::cout << "\nTest 12:" << std::endl;
+
+    //Test: 3PointsEllipseLibrary
+    std::cout << "\nTest 13:" << std::endl;
+
+    //Test: Solution3LinearEqLibrary
+    std::cout << "\nTest 14:" << std::endl;
+
+    //Test: 2PointsPSOUTLibrary
+    std::cout << "\nTest 15:" << std::endl;
+
+    //Test: DeterminantLibrary
+    std::cout << "\nTest 16:" << std::endl;
+
+    //Test: OrientationLibrary
+    std::cout << "\nTest 17:" << std::endl;
+
+    //Test: AddPointingRotationalErrorsLibrary
+    std::cout << "\nTest 18:" << std::endl;
+
+    //Test: AddStationKeepingErrorLibrary
+    std::cout << "\nTest 19:" << std::endl;
+
+    //Test: AddPointingErrorLibrary
+    std::cout << "\nTest 20:" << std::endl;
+
+    //Test: AddRotationalErrorLibrary
+    std::cout << "\nTest 21:" << std::endl;
+
+    //Test: DisplacementEqualPlaneLibrary
+    std::cout << "\nTest 22:" << std::endl;
+
+    //Test: ProjectionSatEllipseLibrary
+    std::cout << "\nTest 23:" << std::endl;
+
+    //Test: XPrimeYPrime2XYLibrary
+    std::cout << "\nTest 24:" << std::endl;
+
+    //Test: EdgeEllipseLibrary
+    std::cout << "\nTest 25:" << std::endl;
+
+    //Test: EllipseViewLibrary
+    std::cout << "\nTest 26:" << std::endl;
+
+    //Test: AngleDiffStationKeepingLibrary
+    std::cout << "\nTest 27:" << std::endl;
+
+    //Test: FindColinearPointLibrary
+    std::cout << "\nTest 28:" << std::endl;
+
+    //Test: ConvexLibrary
+    std::cout << "\nTest 29:" << std::endl;
 }

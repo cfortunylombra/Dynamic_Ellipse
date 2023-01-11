@@ -14,3 +14,5 @@ int NMax = 100;
 float EarthRadius = 6370997.0f; // m
 // GEO Altitude/Earth radius
 float GEOAlt_EarthRad_rat = 6.61072f;
+// TanSK = Tan(0.1degrees)
+float TanSk_rad = tan(0.1f / Rad);

@@ -1,1 +1,11 @@
-﻿  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll
+﻿  ConvexLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.cpp(8,44): warning C4273: 'Convex': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.h(10,39): message : see previous definition of 'Convex'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.cpp(9,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+     Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.exp
+  Generating code
+  3 of 49 functions ( 6.1%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll

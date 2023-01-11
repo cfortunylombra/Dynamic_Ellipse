@@ -19,7 +19,7 @@ CenterGravity_struct CenterGravity(const long& n_points, const float& orbital_po
     // Update longitude of the stations
     points_long = UpdateLongitude(n_points, orbital_position, points_long);
 
-    // Updates the longitudes of the stations
+    // Updates the longitudes of the stations (For-loop)
     for (int i = 0; i < n_points; i++) {
         theta_cg += points_lat[i];
         phi_cg += points_long[i];

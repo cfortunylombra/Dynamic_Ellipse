@@ -1,4 +1,24 @@
-﻿  CenterGravityLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\CenterGravityLibrary.cpp(8,130): warning C4273: 'CenterGravity': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\CenterGravityLibrary.h(16,47): message : see previous definition of 'CenterGravity'
+﻿  AddPointingRotationalErrorsLibrary.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(12,171): warning C4273: 'XTNDEL': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.h(10,43): message : see previous definition of 'XTNDEL'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(100,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(112,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(138,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\AddPointingRotationalErrorsLibrary.cpp(154,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+     Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.exp
+LINK : warning LNK4217: symbol 'Det' defined in 'DeterminantLibrary.obj' is imported by '2PointsPSOUTLibrary.obj' in function 'TwoPts'
+LINK : warning LNK4217: symbol 'Sol3LinEq' defined in 'Solution3LinearEqLibrary.obj' is imported by '3PointsEllipseLibrary.obj' in function 'Points3Ellipse'
+LINK : warning LNK4286: symbol 'Rad' defined in 'Constants.obj' is imported by 'TransformationMatrixLibrary.obj'
+LINK : warning LNK4217: symbol 'Rad' defined in 'Constants.obj' is imported by 'AddPointingErrorLibrary.obj' in function 'PtError'
+LINK : warning LNK4286: symbol 'Rad' defined in 'Constants.obj' is imported by 'AddPointingRotationalErrorsLibrary.obj'
+LINK : warning LNK4217: symbol 'Rad' defined in 'Constants.obj' is imported by 'OrientationLibrary.obj' in function 'Orient'
+LINK : warning LNK4286: symbol 'Rad' defined in 'Constants.obj' is imported by 'Polar2RectangularLibrary.obj'
+LINK : warning LNK4217: symbol 'SkError' defined in 'AddStationKeepingErrorLibrary.obj' is imported by 'AddPointingRotationalErrorsLibrary.obj' in function 'XTNDEL'
+LINK : warning LNK4217: symbol 'PtError' defined in 'AddPointingErrorLibrary.obj' is imported by 'AddPointingRotationalErrorsLibrary.obj' in function 'XTNDEL'
+LINK : warning LNK4217: symbol 'RotError' defined in 'AddRotationalErrorLibrary.obj' is imported by 'AddPointingRotationalErrorsLibrary.obj' in function 'XTNDEL'
+LINK : warning LNK4217: symbol 'UpdateLongitude' defined in 'UpdateLongitudeLibrary.obj' is imported by 'CenterGravityLibrary.obj' in function 'CenterGravity'
+LINK : warning LNK4217: symbol 'GEOAlt_EarthRad_rat' defined in 'Constants.obj' is imported by 'DisplacementEquatPlaneLibrary.obj' in function 'TransXYZ'
+LINK : warning LNK4286: symbol 'GEOAlt_EarthRad_rat' defined in 'Constants.obj' is imported by 'TransformationMatrixLibrary.obj'
+LINK : warning LNK4217: symbol 'TanSk_rad' defined in 'Constants.obj' is imported by 'DisplacementEquatPlaneLibrary.obj' in function 'TransXYZ'
+LINK : warning LNK4217: symbol 'TrigSolve' defined in 'TrigonometricEqSolveLibrary.obj' is imported by 'MinimumSemiMinorAxis2Library.obj' in function 'MinAxis2'
   Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Debug\DynamicEllipse.dll
