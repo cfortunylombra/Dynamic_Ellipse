@@ -5,7 +5,7 @@
 #include <algorithm>
 
 // Definition: This library deletes points from an arbitrary set of points to produce a convex set
-float** Convex(float** Coords, float& NIn) {
+Convex_struct Convex(float** Coords, float& NIn) {
 	float EPS = 0.0001;
 
 	float* IamOut = new float[200];
@@ -194,5 +194,6 @@ float** Convex(float** Coords, float& NIn) {
 		iter = iter + 1;
 	}
 
-	return Coords_new;
+	Convex_struct output = { NOut, Coords_new };
+	return output;
 }

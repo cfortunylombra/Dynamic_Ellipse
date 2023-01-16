@@ -6,5 +6,11 @@
 #define CONVEXLIBRARY_API __declspec(dllimport)
 #endif
 
-// Outputs: Coordinates; given as float**
-extern "C" CONVEXLIBRARY_API  float** Convex(float** Coords, float& NIn);
+// Structure
+// Outputs: NOuts (int) and Coordinates; given as float**
+struct Convex_struct {
+	int NOut;
+	float** Coords_new;
+};
+
+extern "C" CONVEXLIBRARY_API Convex_struct Convex(float** Coords, float& NIn);
