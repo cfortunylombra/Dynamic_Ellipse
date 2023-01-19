@@ -103,9 +103,9 @@ Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& s
 	float dang0 = std::pow(Theta - THc, 2) + std::pow(Phi - PHc, 2);
 
 	// Call Minchk
-	float A0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).A0;
-	float B0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).B0;
-	float CK0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).CK0;
+	A0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).A0;
+	B0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).B0;
+	CK0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).CK0;
 	float Area0 = PointsCheck(M, AMin, CoefAB, ArMin, A0, B0, CK0, PSOut).Area0;
 
 	if ((Area0 < Areal) || (Area0 == Areal && dang0 < Dangl)) {
@@ -121,10 +121,10 @@ Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& s
 
 
 	// Call Threepts
-	float A0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).A0;
-	float B0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).B0;
-	float CK0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).CK0;
-	float B0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).Area0;
+	A0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).A0;
+	B0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).B0;
+	CK0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).CK0;
+	Area0 = Points3Ellipse(M, PSOut, A0, B0, CK0, CoefAB).Area0;
 
 	// Call Orient
 	float Alpha = Orient(A0, B0, CK0).Alpha;
@@ -144,15 +144,15 @@ Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& s
 	}
 
 	// Call 2Points
-	float A0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).A0;
-	float B0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).B0;
-	float CK0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).CK0;
-	float Area0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).Area0;
+	A0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).A0;
+	B0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).B0;
+	CK0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).CK0;
+	Area0 = TwoPts(M, PSOut, A0, B0, CK0, CoefAB).Area0;
 
 	// Call Orient
-	float Alpha = Orient(A0, B0, CK0).Alpha;
-	float Beta = Orient(A0, B0, CK0).Beta;
-	float Omega = Orient(A0, B0, CK0).Omega;
+	Alpha = Orient(A0, B0, CK0).Alpha;
+	Beta = Orient(A0, B0, CK0).Beta;
+	Omega = Orient(A0, B0, CK0).Omega;
 
 	if (Alpha <= CoefAB || Beta <= CoefAB) {
 		if (Area0 < Areal || (Area0 == Areal && dang0 < Dangl)) {
@@ -167,10 +167,10 @@ Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& s
 	}
 
 	// Call MinAx1
-	float A0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).A0;
-	float B0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).B0;
-	float CK0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).CK0;
-	float Area0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).Area0;
+	A0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).A0;
+	B0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).B0;
+	CK0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).CK0;
+	Area0 = MinAxis1(M, A0, B0, CK0, AMin, PSOut).Area0;
 
 	if (Area0 < Areal || (Area0 == Areal && dang0 < Dangl)) {
 		Areal = Area0;
@@ -183,10 +183,10 @@ Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& s
 	}
 
 	// Call MinAx2
-	float A0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).A0;
-	float B0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).B0;
-	float CK0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).CK0;
-	float Area0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).Area0;
+	A0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).A0;
+	B0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).B0;
+	CK0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).CK0;
+	Area0 = MinAxis2(M, A0, B0, CK0, AMin, PSOut).Area0;
 
 	if (Area0 < Areal || (Area0 == Areal && dang0 < Dangl)) {
 		Areal = Area0;
@@ -199,12 +199,12 @@ Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& s
 	}
 
 	float Area = Areal;
-	float A = Al;
-	float B = Bl;
-	float CK = CKl;
+	A = Al;
+	B = Bl;
+	CK = CKl;
 	Theta = Thetal;
 	Phi = Phil;
-	float dango = Dangl;
+	dango = Dangl;
 
 	Loop1_struct output = { Area, A, B, CK, Theta, Phi, dango };
 	return output;

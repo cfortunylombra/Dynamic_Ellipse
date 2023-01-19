@@ -1,13 +1,22 @@
 #include "pch.h"
 #include "Loop.h"
+#include "Loop1.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 // Definition: This subroutine loops through the calculation
-Loop_struct Loop(float& NTot, float** PTRect) {
+Loop_struct Loop(float& NTot, float** PTRect, float& PHMaxx, float& PHMinn, float& THMaxx, float& THMinn, float& thcg, float& station_keeping_error, float& pointing_error, float& rotational_error, float& orbital_position, float** COSCOS, float** COSSIN, float** SIN, float& M, float& XMin, float& AMin, float& ArMin, float& CoefAB) {
 	float Areal = 1000000.0f;
 	float Dangl = 1000000.0f;
+
+	float Al = 0.0f;
+	float Bl = 0.0f;
+	float CKl = 0.0f;
+	float Thetal = 0.0f;
+	float Phil = 0.0f;
+	float Arel = Areal;
+
 	float DistPh = (PHMaxx - PHMinn) / 2.0f;
 	float DistTh = (THMaxx - THMinn) / 2.0f;
 	float Distp = DistPh;
@@ -21,7 +30,7 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 	float Ph2 = Ph1 - 0.4f * Distp;
 	float Ph3 = Ph1 + 0.4f * Distp;
 
-	float Armin = 1000000;
+	float Armin = 1000000.0f;
 	for (int it = -1; it < 2; it++) {
 		Distp = DistPh;
 		float Th1 = Thmi + it * Distt;
@@ -39,7 +48,12 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 		}
 
 		// Call LOOP1
-
+		float Area1 = Loop1(NTot, Th1, Ph1, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Area;
+		float A1 = Loop1(NTot, Th1, Ph1, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).A;
+		float B1 = Loop1(NTot, Th1, Ph1, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).B;
+		float CK1 = Loop1(NTot, Th1, Ph1, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).CK;
+		float Theta = Loop1(NTot, Th1, Ph1, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Theta;
+		float Phi = Loop1(NTot, Th1, Ph1, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Phi;
 
 		if ((Area1 < Areal) || ((Area1 == Areal) && Dang < Dangl)) {
 			Areal = Area1;
@@ -52,6 +66,12 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 		}
 
 		// Call LOOP1
+		float Area2 = Loop1(NTot, Th1, Ph2, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Area;
+		float A2 = Loop1(NTot, Th1, Ph2, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).A;
+		float B2 = Loop1(NTot, Th1, Ph2, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).B;
+		float CK2 = Loop1(NTot, Th1, Ph2, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).CK;
+		Theta = Loop1(NTot, Th1, Ph2, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Theta;
+		Phi = Loop1(NTot, Th1, Ph2, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Phi;
 
 		if ((Area2 < Areal) || ((Area2 == Areal) && Dang < Dangl)) {
 			Areal = Area2;
@@ -64,6 +84,12 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 		}
 
 		// Call LOOP1
+		float Area3 = Loop1(NTot, Th1, Ph3, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Area;
+		float A3 = Loop1(NTot, Th1, Ph3, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).A;
+		float B3 = Loop1(NTot, Th1, Ph3, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).B;
+		float CK3 = Loop1(NTot, Th1, Ph3, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).CK;
+		Theta = Loop1(NTot, Th1, Ph3, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Theta;
+		Phi = Loop1(NTot, Th1, Ph3, Dang, station_keeping_error, pointing_error, rotational_error, orbital_position, PTRect, COSCOS, COSSIN, SIN, Al, Bl, CKl, M, XMin, AMin, ArMin, CoefAB).Phi;
 
 		if ((Area3 < Areal) || ((Area3 == Areal) && Dang < Dangl)) {
 			Areal = Area3;
@@ -98,16 +124,11 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 		}
 
 		if (Distp < 0.000006f) {
-			if ((Arel < Armin) || ((Arel == Armin) && std::abs(Thmix - thcg) >> std::abs(Th1 - thcg))) {
+			if ((Arel < Armin) || ((Arel == Armin) && std::abs(Thmi - thcg) > std::abs(Th1 - thcg))) {
 				Armin = Arel;
-				Thmix = Th1;
+				Thmi = Th1;
 			}
 		}
-	}
-
-	Distt = 0.6f * Distt;
-	if (Distt >= 0.000006f) {
-		Thmi = thmix;
 	}
 
 	float Area = Areal;

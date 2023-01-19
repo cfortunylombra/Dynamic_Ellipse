@@ -8,21 +8,36 @@
 #include "OrientationLibrary.h"
 #include "ProjectionSatEllipseLibrary.h"
 #include "EllipseViewLibrary.h"
+#include "Loop.h"
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 // Definition: Merge of all the libraries
-Calc_struct Calc(long& status, const float& pointing_error, const float& rotational_error, const float& station_keeping_error, const float& minimum_axis, float& orbital_position, float& n_points, float points_lat[], float points_long[], float** COSCOS, float** COSSIN, float** SIN) {
+Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, float& station_keeping_error, float& minimum_axis, float& orbital_position, float& n_points, float points_lat[], float points_long[], float** COSCOS, float** COSSIN, float** SIN, float& M, float& AMin, float& ArMin, float& CoefAB) {
 	
 	// Call CenterGravity
 	float theta_cg = CenterGravity(n_points, orbital_position, points_lat, points_long).theta_cg;
 	float phi_cg = CenterGravity(n_points, orbital_position, points_lat, points_long).phi_cg;
 
 	// Call UpdateLongitude
-	float* points_long = UpdateLongitude(n_points, orbital_position, points_long);
+	points_long = UpdateLongitude(n_points, orbital_position, points_long);
 
 	float NT = n_points;
+
+	float THMaxx = -1000000.0f;
+	float THMinn = 1000000.0f;
+	float PHMaxx = -1000000.0f;
+	float PHMinn = 1000000.0f;
+
+	for (int i = 0; i < n_points; i++) {
+
+		THMaxx = (std::max)(THMaxx, points_lat[i]);
+		THMinn = (std::min)(THMinn, points_lat[i]);
+
+		PHMaxx = (std::max)(PHMaxx, points_long[i]);
+		PHMinn = (std::min)(PHMinn, points_long[i]);
+	}
 
 	float DK2 = std::pow(GEOAlt_EarthRad_rat,2) - 1.0;
 
@@ -67,11 +82,15 @@ Calc_struct Calc(long& status, const float& pointing_error, const float& rotatio
 
 		if (station_keeping_error != 0) {
 			for (int ki = 0; ki < 4; ki++) {
-				Dist2 = (std::max)(Dist2, std::pow(XOut - GEOAlt_EarthRad_rat * COSCOS[ki][0], 2) + std::pow(YOut - GEOAlt_EarthRad_rat * COSSIN[ki][0], 2) + std::pow(ZOut - GEOAlt_EarthRad_rat * SIN[ki][0], 2));
+				if (Dist2 < std::pow(XOut - GEOAlt_EarthRad_rat * COSCOS[ki][0], 2) + std::pow(YOut - GEOAlt_EarthRad_rat * COSSIN[ki][0], 2) + std::pow(ZOut - GEOAlt_EarthRad_rat * SIN[ki][0], 2)) {
+					Dist2 = std::pow(XOut - GEOAlt_EarthRad_rat * COSCOS[ki][0], 2) + std::pow(YOut - GEOAlt_EarthRad_rat * COSSIN[ki][0], 2) + std::pow(ZOut - GEOAlt_EarthRad_rat * SIN[ki][0], 2);
+				}
 			}
 
 			for (int ki = 0; ki < 4; ki++) {
-				Dist2 = (std::max)(Dist2, std::pow(XOut - GEOAlt_EarthRad_rat * COSCOS[ki][1], 2) + std::pow(YOut - GEOAlt_EarthRad_rat * COSSIN[ki][1], 2) + std::pow(ZOut - GEOAlt_EarthRad_rat * SIN[ki][1], 2));
+				if (Dist2 < std::pow(XOut - GEOAlt_EarthRad_rat * COSCOS[ki][1], 2) + std::pow(YOut - GEOAlt_EarthRad_rat * COSSIN[ki][1], 2) + std::pow(ZOut - GEOAlt_EarthRad_rat * SIN[ki][1], 2)) {
+					Dist2 = std::pow(XOut - GEOAlt_EarthRad_rat * COSCOS[ki][1], 2) + std::pow(YOut - GEOAlt_EarthRad_rat * COSSIN[ki][1], 2) + std::pow(ZOut - GEOAlt_EarthRad_rat * SIN[ki][1], 2);
+				}
 			}
 		}
 
@@ -87,7 +106,12 @@ Calc_struct Calc(long& status, const float& pointing_error, const float& rotatio
 	}
 
 	// Call Loop
-
+	float Area = Loop(n_points, PTRect, PHMaxx, PHMinn, THMaxx, THMinn, theta_cg, station_keeping_error, pointing_error, rotational_error, orbital_position, COSCOS, COSSIN, SIN, M, minimum_axis, AMin, ArMin, CoefAB).Area;
+	float A = Loop(n_points, PTRect, PHMaxx, PHMinn, THMaxx, THMinn, theta_cg, station_keeping_error, pointing_error, rotational_error, orbital_position, COSCOS, COSSIN, SIN, M, minimum_axis, AMin, ArMin, CoefAB).A;
+	float B = Loop(n_points, PTRect, PHMaxx, PHMinn, THMaxx, THMinn, theta_cg, station_keeping_error, pointing_error, rotational_error, orbital_position, COSCOS, COSSIN, SIN, M, minimum_axis, AMin, ArMin, CoefAB).B;
+	float CK = Loop(n_points, PTRect, PHMaxx, PHMinn, THMaxx, THMinn, theta_cg, station_keeping_error, pointing_error, rotational_error, orbital_position, COSCOS, COSSIN, SIN, M, minimum_axis, AMin, ArMin, CoefAB).CK;
+	float Theta = Loop(n_points, PTRect, PHMaxx, PHMinn, THMaxx, THMinn, theta_cg, station_keeping_error, pointing_error, rotational_error, orbital_position, COSCOS, COSSIN, SIN, M, minimum_axis, AMin, ArMin, CoefAB).Theta;
+	float Phi = Loop(n_points, PTRect, PHMaxx, PHMinn, THMaxx, THMinn, theta_cg, station_keeping_error, pointing_error, rotational_error, orbital_position, COSCOS, COSSIN, SIN, M, minimum_axis, AMin, ArMin, CoefAB).Phi;
 
 	// Call Orient
 	float Alpha = Orient(A, B, CK).Alpha;
@@ -112,7 +136,7 @@ Calc_struct Calc(long& status, const float& pointing_error, const float& rotatio
 	}
 
 	for (int i = 0; i < n_points; i++) {
-		float PTXX = PTGEO[i][1];
+		float PTXX = Coords_new[i][1];
 		if (PTXX <= -180) {
 			PTXX = PTXX + 360.0f;
 		}
@@ -124,12 +148,15 @@ Calc_struct Calc(long& status, const float& pointing_error, const float& rotatio
 	// Call Project
 	float** Ang = Project(Theta, Phi, Alpha, Beta, Omega);
 
-	if (NFLAG == 1) {
-		n_points = 2;
-	}
-
 	// Call Draw
-	float** Ch = Draw(n_points, Theta, Phi, orbital_position, PTGeo, Ang);
+	float** Ch = Draw(n_points, Theta, Phi, orbital_position, Coords_new, Ang);
+
+	float boresight_lat = Theta;
+	float boresight_long = Phi;
+	float maj_axis = SMX;
+	float minor_axis = SMN;
+	float area = Area;
+	float orientation = YORI;
 	
 	Calc_struct output = { boresight_lat, boresight_long, maj_axis, minor_axis, area, orientation };
 

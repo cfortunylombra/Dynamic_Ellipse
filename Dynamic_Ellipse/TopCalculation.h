@@ -17,4 +17,4 @@ struct Calc_struct {
     float orientation;
 };
 
-extern "C" CALCLIBRARY_API Calc_struct Calc(long& status, const float& pointing_error, const float& rotational_error, const float& station_keeping_error, const float& minimum_axis, float& orbital_position, float& n_points, float points_lat[], float points_long[], float** COSCOS, float** COSSIN, float** SIN);
+extern "C" CALCLIBRARY_API Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, float& station_keeping_error, float& minimum_axis, float& orbital_position, float& n_points, float points_lat[], float points_long[], float** COSCOS, float** COSSIN, float** SIN, float& M, float& AMin, float& ArMin, float& CoefAB);

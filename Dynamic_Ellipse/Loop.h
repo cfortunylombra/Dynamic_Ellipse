@@ -17,4 +17,4 @@ struct Loop_struct {
 	float Phi;
 };
 
-extern "C" LOOPLIBRARY_API Loop_struct Loop(float& NTot, float** PTRect);
+extern "C" LOOPLIBRARY_API Loop_struct Loop(float& NTot, float** PTRect, float& PHMaxx, float& PHMinn, float& THMaxx, float& THMinn, float& thcg, float& station_keeping_error, float& pointing_error, float& rotational_error, float& orbital_position, float** COSCOS, float** COSSIN, float** SIN, float& M, float& XMin, float& AMin, float& ArMin, float& CoefAB);

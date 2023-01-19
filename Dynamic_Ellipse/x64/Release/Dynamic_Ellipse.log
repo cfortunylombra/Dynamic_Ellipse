@@ -1,11 +1,17 @@
-﻿  ConvexLibrary.cpp
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.cpp(8,44): warning C4273: 'Convex': inconsistent dll linkage
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.h(10,39): message : see previous definition of 'Convex'
-D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\ConvexLibrary.cpp(9,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+﻿  TopCalculation.cpp
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(17,311): warning C4273: 'Calc': inconsistent dll linkage
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.h(20,40): message : see previous definition of 'Calc'
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(20,33): warning C4244: 'argument': conversion from 'float' to 'const long', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(21,31): warning C4244: 'argument': conversion from 'float' to 'const long', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(24,32): warning C4244: 'argument': conversion from 'float' to 'const long', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(42,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(45,23): warning C4244: 'initializing': conversion from 'float' to 'size_t', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(56,7): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(59,23): warning C4244: 'initializing': conversion from 'float' to 'size_t', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(61,22): warning C4244: 'initializing': conversion from 'float' to 'size_t', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(76,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(86,128): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\DLL_Fortran\Dynamic_Ellipse\Dynamic_Ellipse\TopCalculation.cpp(92,128): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
      Creating library D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.lib and object D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.exp
-  Generating code
-  3 of 49 functions ( 6.1%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Dynamic_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll
+TopCalculation.obj : error LNK2001: unresolved external symbol __imp_Project
+D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\DynamicEllipse.dll : fatal error LNK1120: 1 unresolved externals
