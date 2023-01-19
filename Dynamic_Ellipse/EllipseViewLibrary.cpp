@@ -13,11 +13,11 @@ float** Draw(float& N, float& Theta, float& Phi, float& SatLon, float** PtsGeo, 
 	float DelPhi = Phi - SatLon;
 	
 	if (DelPhi <= -180) {
-		Phi = Phi + 360;
+		Phi = Phi + 360.0f;
 	}
 
 	else if (DelPhi >= 180) {
-		Phi = Phi - 360;
+		Phi = Phi - 360.0f;
 	}
 
 	char ChBL = ' ';
@@ -79,8 +79,8 @@ float** Draw(float& N, float& Theta, float& Phi, float& SatLon, float** PtsGeo, 
 	}
 
 	for (int i = 0; i < 36; i++) {
-		ITh = 50.0 * (ThMax - Ang[i][0]) / DTh + 1.0001;
-		IPh = 75.0 * (PtsGeo[i][1] - PhMin) / DPh + 1.0001;
+		ITh = 50.0f * (ThMax - Ang[i][0]) / DTh + 1.0001;
+		IPh = 75.0f * (PtsGeo[i][1] - PhMin) / DPh + 1.0001;
 
 		if (Ch[ITh][IPh] == ChX) {
 			Ch[ITh][IPh] = ChZ;

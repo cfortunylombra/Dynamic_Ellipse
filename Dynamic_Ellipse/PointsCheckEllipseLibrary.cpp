@@ -19,7 +19,7 @@ PointsCheck_struct PointsCheck(const long& M, float& AMin, float& CoefAB, float&
 	}
 
 	Area0 = ArMin;
-	A0 = 1 / std::pow(RaMin, 2);
+	A0 = 1.0f / std::pow(RaMin, 2);
 	B0 = A0;
 	CK0 = 0.0f;
 

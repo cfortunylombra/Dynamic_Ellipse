@@ -95,29 +95,29 @@ Calc_struct Calc(long& status, const float& pointing_error, const float& rotatio
 	float Omega = Orient(A, B, CK).Omega;
 
 
-	float SMX = 2.0 * 57.2957795 * std::atan(1.0 / std::sqrt(Alpha));
-	float SMN = 2.0 * 57.2957795 * std::atan(1.0 / std::sqrt(Beta));
+	float SMX = 2.0f * 57.2957795f * std::atan(1.0f / std::sqrt(Alpha));
+	float SMN = 2.0f * 57.2957795f * std::atan(1.0f / std::sqrt(Beta));
 
-	float YORI = 90.0 - Omega;
+	float YORI = 90.0f - Omega;
 
 	if (YORI < 0) {
-		YORI = 180 + YORI;
+		YORI = 180.0f + YORI;
 	}
 
 	if (Phi <= -180) {
-		Phi = Phi + 360;
+		Phi = Phi + 360.0f;
 	}
 	else if (Phi > 180) {
-		Phi = Phi - 360;
+		Phi = Phi - 360.0f;
 	}
 
 	for (int i = 0; i < n_points; i++) {
 		float PTXX = PTGEO[i][1];
 		if (PTXX <= -180) {
-			PTXX = PTXX + 360;
+			PTXX = PTXX + 360.0f;
 		}
 		else if (PTXX > 180) {
-			PTXX = PTXX - 360;
+			PTXX = PTXX - 360.0f;
 		}
 	}
 

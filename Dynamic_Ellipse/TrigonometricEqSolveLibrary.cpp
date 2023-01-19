@@ -40,18 +40,18 @@ TrigSolve_struct TrigSolve(float& X1, float& Y1, float& X2, float& Y2, float& TH
 
 	if (RDE1 == 0.0f) {
 		if (RNU1 >= 0.0f) {
-			THFIN1 = -M_PI / 2;
+			THFIN1 = -M_PI / 2.0f;
 		}
 		else if (RNU1 < 0.0f) {
-			THFIN1 = M_PI / 2;
+			THFIN1 = M_PI / 2.0f;
 		}
 	}
 	else {
 		THFIN1 = std::atan2(-RNU1, RDE1);
 	}
 
-	if ((std::abs(THFIN1 - RTH1) < M_PI / 2) && (std::abs(THFIN1 - RTH1) > M_PI / 2)) { //REDUNDANT THIS IF STATEMENT
-		float Alpha1 = RC1 + RD1 * std::pow(std::tan(-M_PI / 2), 2);
+	if ((std::abs(THFIN1 - RTH1) < M_PI / 2.0f) && (std::abs(THFIN1 - RTH1) > M_PI / 2.0f)) { //REDUNDANT THIS IF STATEMENT
+		float Alpha1 = RC1 + RD1 * std::pow(std::tan(-M_PI / 2.0f), 2);
 	}
 	else {
 		float Alpha1 = RC1 + RD1 * std::pow(std::tan(THFIN1 - RTH1), 2);
@@ -59,18 +59,18 @@ TrigSolve_struct TrigSolve(float& X1, float& Y1, float& X2, float& Y2, float& TH
 
 	if (RDE2 == 0.0f) {
 		if (RNU2 >= 0.0f) {
-			float THFIN2 = -M_PI / 2;
+			float THFIN2 = -M_PI / 2.0f;
 		}
 		else {
-			float THFIN2 = M_PI / 2;
+			float THFIN2 = M_PI / 2.0f;
 		}
 	}
 	else {
 		float THFIN2 = std::atan2(-RNU2, RDE2);
 	}
 
-	if ((std::abs(THFIN2-RTH1)<M_PI/2) && (std::abs(THFIN2-RTH1)>M_PI/2)) { //REDUNDANT THIS IF STATEMENT
-		float Alpha2 = RC1 + RD1 * std::pow(std::tan(-M_PI / 2), 2);
+	if ((std::abs(THFIN2-RTH1)<M_PI/2.0f) && (std::abs(THFIN2-RTH1)>M_PI/2.0f)) { //REDUNDANT THIS IF STATEMENT
+		float Alpha2 = RC1 + RD1 * std::pow(std::tan(-M_PI / 2.0f), 2);
 	}
 	else {
 		float Alpha2 = RC1 + RD1 * std::pow(std::tan(THFIN2-RTH1), 2);

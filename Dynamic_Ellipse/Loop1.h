@@ -18,4 +18,4 @@ struct Loop1_struct {
 	float Dango;
 };
 
-extern "C" LOOP1LIBRARY_API Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float** PTRect);
+extern "C" LOOP1LIBRARY_API Loop1_struct Loop1(float& NTot, float& THct, float& PHct, float& dango, float& station_keeping_error, float& pointing_error, float& rotational_error, float& orbital_position, float** PTRect, float** COSCOS, float** COSSIN, float** SIN, float& A, float& B, float& CK, float& M, float& XMin, float& AMin, float& ArMin, float& CoefAB);

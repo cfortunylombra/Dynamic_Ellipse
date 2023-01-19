@@ -68,7 +68,7 @@ float* StaKep(float& ThC, float& PhC, float& N, float** PtRect, float** COSCOS, 
 			
 				DotP = PRod - GEOAlt_EarthRad_rat * ((Xa + XC) * COSCOS[j][ind2] + (Ya + YC) * COSSIN[j][ind2] + (Za + ZC) * SIN[j][ind2]);
 			
-				Angl = DotP / (2 * Pap * PC[j][ind2]);
+				Angl = DotP / (2.0f * Pap * PC[j][ind2]);
 
 				if (Angl > 1.0) {
 					OmegaP = 0.0f;

@@ -7,7 +7,7 @@
 // Definition: This library determines an ellipse with a given minimum semi-major axis, having the smallest area
 MinAxis1_struct MinAxis1(const long& M, float& A0, float& B0, float& CK0, float& AMin, float** PSOut) {
 	float RaMin = AMin;
-	float Beta = 1 / std::pow(RaMin, 2);
+	float Beta = 1.0f / std::pow(RaMin, 2);
 	float Area0 = 1000001.0f;
 
 	main_forloop:
@@ -21,12 +21,12 @@ MinAxis1_struct MinAxis1(const long& M, float& A0, float& B0, float& CK0, float&
 				continue;
 			}
 
-			float Alpha = 1 / DL2;
+			float Alpha = 1.0f / DL2;
 			float Cos = XL / DL;
 			float Cos2 = std::pow(Cos, 2);
 			float Sin = YL / DL;
 			float Sin2 = std::pow(Sin, 2);
-			float CK1 = 2 * Cos * Sin;
+			float CK1 = 2.0f * Cos * Sin;
 			float A = Cos2 * Alpha + Sin2 * Beta;
 			float B = Cos2 * Beta + Sin2 * Alpha;
 			float CK = CK1 * (Alpha - Beta);

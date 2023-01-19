@@ -58,15 +58,15 @@ float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omeg
 
 		else {
 			float PlRot = MsTog[0][0] * X + MsTog[0][2] * Y;
-			float ACoef = (X * X + Y * Y) * (RK2 - 1) - RK2 * PlRot * PlRot;
-			float BCoef = -2 * RK2 * MsTog[0][2] * PlRot;
-			float CCoef = (RK2 - 1) - RK2 * MsTog[0][2] * MsTog[0][2];
+			float ACoef = (X * X + Y * Y) * (RK2 - 1.0f) - RK2 * PlRot * PlRot;
+			float BCoef = -2.0f * RK2 * MsTog[0][2] * PlRot;
+			float CCoef = (RK2 - 1.0f) - RK2 * MsTog[0][2] * MsTog[0][2];
 
-			float SQT = std::sqrt(BCoef * BCoef - 4 * ACoef * CCoef);
-			float RLamb = (-BCoef + SQT) / (2 * ACoef);
+			float SQT = std::sqrt(BCoef * BCoef - 4.0f * ACoef * CCoef);
+			float RLamb = (-BCoef + SQT) / (2.0f * ACoef);
 
 			if (RLamb < 0) {
-				RLamb = (-BCoef - SQT) / (2 * ACoef);
+				RLamb = (-BCoef - SQT) / (2.0f * ACoef);
 			}
 
 			PtSat[0] = X * RLamb;
@@ -79,7 +79,7 @@ float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omeg
 			Ze = PtErth[2];
 
 			R2 = Xe * Xe + Ye * Ye + Ze * Ze;
-			float QT = Xe * Xe * RK2 - (RK2 - 1) * R2;
+			float QT = Xe * Xe * RK2 - (RK2 - 1.0f) * R2;
 
 			FAC = -Xe * GEOAlt_EarthRad_rat / R2;
 			Xe = GEOAlt_EarthRad_rat + FAC * Xe;

@@ -25,7 +25,7 @@ float** PtError(float* PTIn, float& TanPe) {
 	}
 
 	for (int i = 0; i < 7; i++) {
-		float Ang = (-120 + i * 30) / Rad;
+		float Ang = (-120.0f + i * 30.0f) / Rad;
 		PT7Out[i][0] = X + DelX * std::cos(Ang) - DelY * std::sin(Ang);
 		PT7Out[i][1] = Y + DelY * std::cos(Ang) - DelX * std::sin(Ang);
 		PT7Out[i][2] = 1.0f;

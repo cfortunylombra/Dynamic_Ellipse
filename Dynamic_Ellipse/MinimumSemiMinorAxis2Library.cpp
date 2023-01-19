@@ -12,9 +12,9 @@ MinAxis2_struct MinAxis2(const long& M, float& A0, float& B0, float& CK0, float&
 	float TH2 = 0.0f;
 		
 	float Area0 = 1000001.0f;
-	float Beta2 = 1 / std::pow(AMin,2);
+	float Beta2 = 1.0f / std::pow(AMin,2);
 	float RaMin = AMin;
-	float RBeta2 = 1 / std::pow(RaMin, 2);
+	float RBeta2 = 1.0f / std::pow(RaMin, 2);
 
 	for (int i = 0; i < M - 1; i++) {
 		float X1 = PSOut[i][0];
@@ -25,7 +25,7 @@ MinAxis2_struct MinAxis2(const long& M, float& A0, float& B0, float& CK0, float&
 			continue;
 		}
 
-		float C1 = 1 / R12;
+		float C1 = 1.0f / R12;
 		float D1 = C1 - Beta2;
 		float R1 = std::sqrt(R12);
 		float CV = X1 / R1;

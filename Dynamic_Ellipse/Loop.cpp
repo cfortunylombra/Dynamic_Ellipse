@@ -6,20 +6,20 @@
 
 // Definition: This subroutine loops through the calculation
 Loop_struct Loop(float& NTot, float** PTRect) {
-	float Areal = 1000000.0;
-	float Dangl = 1000000.0;
-	float DistPh = (PHMaxx - PHMinn) / 2;
-	float DistTh = (THMaxx - THMinn) / 2;
+	float Areal = 1000000.0f;
+	float Dangl = 1000000.0f;
+	float DistPh = (PHMaxx - PHMinn) / 2.0f;
+	float DistTh = (THMaxx - THMinn) / 2.0f;
 	float Distp = DistPh;
 	float Distt = DistTh;
 	float Thmi = THMinn + Distt;
-	Distt = 0.4 * Distt;
+	Distt = 0.4f * Distt;
 	float Dang = Dangl;
 
 	Distp = DistPh;
 	float Ph1 = PHMinn + Distp;
-	float Ph2 = Ph1 - 0.4 * Distp;
-	float Ph3 = Ph1 + 0.4 * Distp;
+	float Ph2 = Ph1 - 0.4f * Distp;
+	float Ph3 = Ph1 + 0.4f * Distp;
 
 	float Armin = 1000000;
 	for (int it = -1; it < 2; it++) {
@@ -75,7 +75,7 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 			Dangl = Dang;
 		}
 
-		Distp = 0.6 * Distp;
+		Distp = 0.6f * Distp;
 		if ((Area1 <= Area2) && (Area1 <= Area3)) {
 			Ph1 = Ph1;
 			Ph2 = Ph1 - Distp;
@@ -97,7 +97,7 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 			Arel = Area3;
 		}
 
-		if (Distp < 0.000006) {
+		if (Distp < 0.000006f) {
 			if ((Arel < Armin) || ((Arel == Armin) && std::abs(Thmix - thcg) >> std::abs(Th1 - thcg))) {
 				Armin = Arel;
 				Thmix = Th1;
@@ -105,8 +105,8 @@ Loop_struct Loop(float& NTot, float** PTRect) {
 		}
 	}
 
-	Distt = 0.6 * Distt;
-	if (Distt >= 0.000006) {
+	Distt = 0.6f * Distt;
+	if (Distt >= 0.000006f) {
 		Thmi = thmix;
 	}
 
