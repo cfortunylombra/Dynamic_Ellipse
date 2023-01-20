@@ -31,6 +31,9 @@
 #include "AngleDiffStationKeepingLibrary.h"
 #include "FindColinearPointLibrary.h"
 #include "ConvexLibrary.h"
+#include "Loop.h"
+#include "Loop1.h"
+#include "TopCalculation.h"
 #include <iostream>
 #include <algorithm>
 

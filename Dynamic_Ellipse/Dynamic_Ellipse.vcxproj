@@ -151,9 +151,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="cpp.hint" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="2PointsPSOUTLibrary.h" />
     <ClInclude Include="3PointsEllipseLibrary.h" />
     <ClInclude Include="AddPointingErrorLibrary.h" />

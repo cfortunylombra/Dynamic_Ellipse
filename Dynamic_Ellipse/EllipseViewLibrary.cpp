@@ -5,7 +5,7 @@
 #include <math.h>
 
 // Definition: This library gives a primitive view of ellipse
-float** Draw(float& N, float& Theta, float& Phi, float& SatLon, float** PtsGeo, float** Ang) {
+float** DrawEllipse(float& N, float& Theta, float& Phi, float& SatLon, float** PtsGeo, float** Ang) {
 	//Initialization
 	int ITh = 0.0f;
 	int IPh = 0.0f;

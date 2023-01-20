@@ -7,4 +7,4 @@
 #endif
 
 // Outputs: CH; given in a list (float**)
-extern "C" DRAWLIBRARY_API float** Draw(float& N, float& Theta, float& Phi, float& SatLon, float** PtsGeo, float** Ang);
+extern "C" DRAWLIBRARY_API float** DrawEllipse(float& N, float& Theta, float& Phi, float& SatLon, float** PtsGeo, float** Ang);

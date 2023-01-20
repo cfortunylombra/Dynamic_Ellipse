@@ -7,4 +7,4 @@
 #endif 
 
 // Outputs: Ang in terms of float*
-extern "C" PROJLIBRARY_API float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omega);
+extern "C" PROJLIBRARY_API float** Proj(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omega, float& SatLon, float* PtSat);

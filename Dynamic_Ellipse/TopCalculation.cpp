@@ -10,18 +10,18 @@
 #include "EllipseViewLibrary.h"
 #include "Loop.h"
 #include <iostream>
-#define _USE_MATH_DEFINES
-#include <math.h>
 
 // Definition: Merge of all the libraries
 Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, float& station_keeping_error, float& minimum_axis, float& orbital_position, float& n_points, float points_lat[], float points_long[], float** COSCOS, float** COSSIN, float** SIN, float& M, float& AMin, float& ArMin, float& CoefAB) {
-	
+
 	// Call CenterGravity
 	float theta_cg = CenterGravity(n_points, orbital_position, points_lat, points_long).theta_cg;
 	float phi_cg = CenterGravity(n_points, orbital_position, points_lat, points_long).phi_cg;
 
 	// Call UpdateLongitude
 	points_long = UpdateLongitude(n_points, orbital_position, points_long);
+
+	float *PtSat = new float[3];
 
 	float NT = n_points;
 
@@ -39,7 +39,7 @@ Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, f
 		PHMinn = (std::min)(PHMinn, points_long[i]);
 	}
 
-	float DK2 = std::pow(GEOAlt_EarthRad_rat,2) - 1.0;
+	float DK2 = std::pow(GEOAlt_EarthRad_rat, 2) - 1.0;
 
 	float** Coords;
 	Coords = new float* [NT];
@@ -73,8 +73,12 @@ Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, f
 		float YOut = Pol2Rect(THin, PHin).Yout;
 		float ZOut = Pol2Rect(THin, PHin).Zout;
 
+		PtSat[0] = XOut;
+		PtSat[1] = YOut;
+		PtSat[2] = ZOut;
+
 		float Dist2 = std::pow(GEOAlt_EarthRad_rat - XOut, 2) + std::pow(YOut, 2) + std::pow(ZOut, 2);
-		
+
 		if (Dist2 > DK2) {
 			std::cout << "Some Points not visible from satellite." << std::endl;
 			std::cout << "\nERROR 404" << std::endl;
@@ -146,10 +150,10 @@ Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, f
 	}
 
 	// Call Project
-	float** Ang = Project(Theta, Phi, Alpha, Beta, Omega);
+	float** Ang = Proj(Theta, Phi, Alpha, Beta, Omega, orbital_position, PtSat);
 
 	// Call Draw
-	float** Ch = Draw(n_points, Theta, Phi, orbital_position, Coords_new, Ang);
+	float** Ch = DrawEllipse(n_points, Theta, Phi, orbital_position, Coords_new, Ang);
 
 	float boresight_lat = Theta;
 	float boresight_long = Phi;
@@ -157,7 +161,7 @@ Calc_struct Calc(long& status, float& pointing_error, float& rotational_error, f
 	float minor_axis = SMN;
 	float area = Area;
 	float orientation = YORI;
-	
+
 	Calc_struct output = { boresight_lat, boresight_long, maj_axis, minor_axis, area, orientation };
 
 	return output;

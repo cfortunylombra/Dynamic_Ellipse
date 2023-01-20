@@ -8,7 +8,7 @@
 #include <iostream>
 
 // Definition: This library projects satellite ellipse onto earth
-float** Project(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omega, float& SatLon, float* PtSat) {
+float** Proj(float& Theta, float& Phi, float& Alpha, float& Beta, float& Omega, float& SatLon, float* PtSat) {
 	float** Ang;
 	Ang = new float* [26];
 	for (int i = 0; i < 26; i++) {

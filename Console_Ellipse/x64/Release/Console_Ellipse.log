@@ -1,5 +1,4 @@
-﻿  Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-  All 13 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  Console_Ellipse.vcxproj -> D:\DLL_Fortran\Dynamic_Ellipse\x64\Release\Console_Ellipse.exe
+﻿  Console_Ellipse.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1094,5): warning MSB4220: Waiting for the currently executing task "Link" to cancel.
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(1094,5): warning MSB4220: Waiting for the currently executing task "Link" to cancel.
+MSBUILD : error MSB4166: Child node "2" exited prematurely. Shutting down. Diagnostic information may be found in files in "C:\Users\lombrana\AppData\Local\Temp\2\" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.
